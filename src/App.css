@@ -1,3 +1,10 @@
+body{
+  background-image:  url("bg.png");
+  background-color: blueviolet;
+  background-position:100% 0%;
+  background-size: 1370px;
+}
+
 .App {
   text-align: center;
 }
@@ -18,10 +25,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+   justify-content: space-between;
+
 }
 
 .App-link {
-  color: #61dafb;
+  color: hsl(325, 90%, 52%);
 }
 
 @keyframes App-logo-spin {
@@ -32,8 +41,11 @@
     transform: rotate(360deg);
   }
 }
-.custom-btn{
+.btn-danger{
 
   border-radius: 30%;
   margin-right: 1% !important;
 }
+h1{color:white;}
+h5{color: white;} 
+
