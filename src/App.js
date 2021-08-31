@@ -2,6 +2,7 @@ import { ReactComponent as ReactLogo } from "./abc.svg";
 import "./App.css";
 
 const Nav = () => {
+ 
   return (
     <nav
       class="navbar navbar-expand-lg navbar-light "
@@ -106,6 +107,53 @@ const Nav = () => {
   );
 };
 function App() {
+  const cards=[
+    [
+    {
+        image:"./img2.png",
+        description:"a"
+    },{
+        image:"./img3.svg"
+        ,description:"b"
+    }
+],
+[
+  {
+      image:"./img4.png"
+      ,description:"c"
+
+  },{
+      image:"./img1.jpg"
+      ,description:"d"
+
+  }
+],
+[
+  {
+      image:"./img5.png"
+      ,description:"e"
+
+  },{
+      image:"./img6.gif"
+      ,description:"f"
+
+  }
+],
+]
+const texts=[
+  {
+    title:"aa",
+    content:"vvv"
+  },
+  {
+    title:"aa",
+    content:"vvv"
+  },
+  {
+    title:"aa",
+    content:"vvv"
+  },
+]
   return (
     <div
       className="App container-fluid"
@@ -300,17 +348,15 @@ function App() {
             </div>
           </div>
         </div>
-<div className="col-md-12 mb-5">
-<button
+        <div className="col-md-12 mb-5">
+          <button
             type="button"
             class="btn btn-danger"
-            style={{alignSelf:'center'}}
+            style={{ alignSelf: "center" }}
           >
             schedule Demo{" "}
           </button>
-</div>
-        
-        
+        </div>
 
         <div className="col-md-12">
           <div style={{ color: "#87CEEB" }}>
@@ -321,164 +367,69 @@ function App() {
             Crafted with skill and care to help our clients grow their business!
           </h5>
         </div>
-</div>
-        <div
-          class="row"
-          style={{ justifyContent: "space-around", alignItems: "flex-start",backgroundColor:'navy' }}
-        >
-    <div className="col-md-2"></div>
-          <div className="col-md-4 mb-2">
-            <div
-              class="card margin gif"
-              id="a"
-              style={{ width: "350px", height: "350px", position: "relative" }}
-            >
-         <img src="./img5.png"/> <h1>uyyygfyf</h1>
-              <div
-                className="title"
-                style={{
-                  width: "350px",
-                  height: "350px",
-                  position: "relative",
-                  top: "0px",
-                }}
-              >
-                qhhhh
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-4 mb-2">
-            <div
-              class="card margin gif"
-              id="a"
-              style={{ width: "350px", height: "350px", position: "relative" }}
-            >
-        <img src="/img2.jpg"></img> <h1>uyyygfyf</h1>
-              <div
-                className="title"
-                style={{
-                  width: "350px",
-                  height: "350px",
-                  backgroundcolor: "white ",
-                  position: "absolute",
-                  top: "0px",
-                }}
-              >
-                qhhhh
-              </div>
-            </div>
-          </div>
-          <div className="col-md-2"></div>
-
-          </div>
-          <div
-          class="row"
-          style={{ justifyContent: "space-around", alignItems: "flex-start",backgroundColor:'navy' }}
-        >
-    <div className="col-md-2"></div>
-          <div className="col-md-4 mb-2">
-            <div
-              class="card margin gif"
-              id="a"
-              style={{ width: "350px", height: "350px", position: "relative" }}
-            >
-         <img src="./img5.png"/> <h1>uyyygfyf</h1>
-              <div
-                className="title"
-                style={{
-                  width: "350px",
-                  height: "350px",
-                  position: "relative",
-                  top: "0px",
-                }}
-              >
-                qhhhh
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-4 mb-2">
-            <div
-              class="card margin gif"
-              id="a"
-              style={{ width: "350px", height: "350px", position: "relative" }}
-            >
-        <img src="/img2.jpg"></img> <h1>uyyygfyf</h1>
-              <div
-                className="title"
-                style={{
-                  width: "350px",
-                  height: "350px",
-                  backgroundcolor: "white ",
-                  position: "absolute",
-                  top: "0px",
-                }}
-              >
-                qhhhh
-              </div>
-            </div>
-          </div>
-          <div className="col-md-2"></div>
-
-          </div>
-          <div
-          class="row"
-          style={{ justifyContent: "space-around", alignItems: "flex-start",backgroundColor:'navy' }}
-        >
-    <div className="col-md-2"></div>
-          <div className="col-md-4 mb-2">
-            <div
-              class="card margin gif"
-              id="a"
-              style={{ width: "350px", height: "350px", position: "relative" }}
-            >
-         <img src="./img5.png"/> <h1>uyyygfyf</h1>
-              <div
-                className="title"
-                style={{
-                  width: "350px",
-                  height: "350px",
-                  position: "relative",
-                  top: "0px",
-                }}
-              >
-                qhhhh
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-4 mb-2">
-            <div
-              class="card margin gif"
-              id="a"
-              style={{ width: "350px", height: "350px", position: "relative" }}
-            >
-        <img src="/img2.jpg"></img> <h1>uyyygfyf</h1>
-              <div
-                className="title"
-                style={{
-                  width: "350px",
-                  height: "350px",
-                  backgroundcolor: "white ",
-                  position: "absolute",
-                  top: "0px",
-                }}
-              >
-                qhhhh
-              </div>
-            </div>
-          </div>
-          <div className="col-md-2"></div>
-
-          </div>
-   
-        
-
-           
-
-        
       </div>
+     {
+       cards.map(card=>{
+        return(
+            <div
+            class="row"
+            style={{
+              justifyContent: "space-around",
+              alignItems: "flex-start",
+              backgroundColor: "navy",
+            }}
+          >
+            <div className="col-md-2"></div>
+    
+          {
+              card.map(c=>{
+    return(
+        <div className="col-md-4 mb-2"
+        style={{ position: "relative" }}
+        >
+              <div
+                class="card margin gif"
+                id="a"
+                style={{ width: "350px", height: "350px", position: "relative" ,
+              backgroundImage:'url(' + c.image + ')',
+              backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover"
+              }}
+
+              >
+               
+              </div>
+              <div
+                  className="title"
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    position: "aboslute",
+                    top: "5%",
+                    left:"6%",
+                    backgroundColor:'red',
+                   padding:"1%",
+                   justifyContent:'center',
+                   alignItems:"center",
+                   borderRadius:"15px"
+
+
+                  }}
+                >
+                  <span>
+                    {c.description}
+                  </span>
+                </div>
+            </div>
+    )
+              })
+          }
+            <div className="col-md-2"></div>
+    
+          </div>
+        )
+    })
+     }
+    </div>
   );
 }
 
