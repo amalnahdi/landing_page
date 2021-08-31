@@ -1,10 +1,15 @@
-body{
+
+.bg{
   background-image:  url("bg.png");
   background-color: blueviolet;
-  background-position:100% 0%;
-  background-size: 1370px;
+  background-position:100%;
+  background-size: 100%;
+  height: auto;
 }
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .App {
   text-align: center;
 }
@@ -17,7 +22,7 @@ body{
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color:#87487D;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,19 +38,43 @@ body{
   color: hsl(325, 90%, 52%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.btn-danger{
 
-  border-radius: 30%;
+.btn-danger{
+  width: 279px;
+    height: 58px;
+    border-radius: 45px;
+    background-color: #fd435a;
+    box-shadow: 0 0 0 6px rgb(253 87 108 / 25%);
+
+ 
   margin-right: 1% !important;
 }
 h1{color:white;}
 h5{color: white;} 
 
+.div-block-305 {
+  display: flex;
+    width: 1200px;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+#a{
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+}
+.card {
+  position: relative;
+  height: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px 1px rgb(0 0 0 / 5%);
+}
