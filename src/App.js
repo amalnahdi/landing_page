@@ -1,8 +1,9 @@
 import { ReactComponent as ReactLogo } from "./abc.svg";
 import "./App.css";
 
+import { Player } from "video-react";
+
 const Nav = () => {
- 
   return (
     <nav
       class="navbar navbar-expand-lg navbar-light "
@@ -107,53 +108,55 @@ const Nav = () => {
   );
 };
 function App() {
-  const cards=[
+  const cards = [
     [
+      {
+        image: "./img2.png",
+        description: "UI Design",
+      },
+      {
+        image: "./img3.svg",
+        description: "App Design",
+      },
+    ],
+    [
+      {
+        image: "./img4.png",
+        description: "UI Design",
+      },
+      {
+        image: "./img1.jpg",
+        description: "App Design",
+      },
+    ],
+    [
+      {
+        image: "./img5.png",
+        description: "Graphic Design",
+      },
+      {
+        image: "./img6.gif",
+        description: "Animation",
+      },
+    ],
+  ];
+  const texts = [
     {
-        image:"./img2.png",
-        description:"a"
-    },{
-        image:"./img3.svg"
-        ,description:"b"
-    }
-],
-[
-  {
-      image:"./img4.png"
-      ,description:"c"
-
-  },{
-      image:"./img1.jpg"
-      ,description:"d"
-
-  }
-],
-[
-  {
-      image:"./img5.png"
-      ,description:"e"
-
-  },{
-      image:"./img6.gif"
-      ,description:"f"
-
-  }
-],
-]
-const texts=[
-  {
-    title:"aa",
-    content:"vvv"
-  },
-  {
-    title:"aa",
-    content:"vvv"
-  },
-  {
-    title:"aa",
-    content:"vvv"
-  },
-]
+      title: "Create design projects",
+      content:
+        "Submit as many job requests as you want. We'll then assign you your personal designers and project manager to work on these requests",
+    },
+    {
+      title: "Drafts & revisions",
+      content:
+        "You’ll receive your design within a few business days. Submit as many revisions as you want until the design is perfect! ",
+    },
+    {
+      title: "Complete & download",
+      content:
+        "Submit as many job requests as you want. We'll then assign you your personal designers and project manager to work on these requests",
+    },
+  ];
   return (
     <div
       className="App container-fluid"
@@ -368,10 +371,9 @@ const texts=[
           </h5>
         </div>
       </div>
-     {
-       cards.map(card=>{
-        return(
-            <div
+      {cards.map((card) => {
+        return (
+          <div
             class="row"
             style={{
               justifyContent: "space-around",
@@ -380,55 +382,82 @@ const texts=[
             }}
           >
             <div className="col-md-2"></div>
-    
-          {
-              card.map(c=>{
-    return(
-        <div className="col-md-4 mb-2"
-        style={{ position: "relative" }}
-        >
-              <div
-                class="card margin gif"
-                id="a"
-                style={{ width: "350px", height: "350px", position: "relative" ,
-              backgroundImage:'url(' + c.image + ')',
-              backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover"
-              }}
 
-              >
-               
-              </div>
-              <div
-                  className="title"
-                  style={{
-                    width: "auto",
-                    height: "auto",
-                    position: "aboslute",
-                    top: "5%",
-                    left:"6%",
-                    backgroundColor:'red',
-                   padding:"1%",
-                   justifyContent:'center',
-                   alignItems:"center",
-                   borderRadius:"15px"
-
-
-                  }}
-                >
-                  <span>
-                    {c.description}
-                  </span>
+            {card.map((c) => {
+              return (
+                <div className="col-md-4 mb-2" style={{ position: "relative" }}>
+                  <div
+                    class="card margin gif"
+                    id="a"
+                    style={{
+                      width: "450px",
+                      height: "400px",
+                      position: "relative",
+                      backgroundImage: "url(" + c.image + ")",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                    }}
+                  ></div>
+                  <div
+                    className="title"
+                    style={{
+                      width: "auto",
+                      height: "auto",
+                      position: "aboslute",
+                      top: "5%",
+                      left: "6%",
+                      backgroundColor: "white",
+                      padding: "1%",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      borderRadius: "15px",
+                    }}
+                  >
+                    <span>{c.description}</span>
+                  </div>
                 </div>
-            </div>
-    )
-              })
-          }
+              );
+            })}
             <div className="col-md-2"></div>
-    
           </div>
-        )
-    })
-     }
+        );
+      })}
+      <div
+        style={{
+          backgroundColor: "navy",
+          alignContent: "center",
+          justifyContent: "center",
+          paddingTop: "9%",
+          paddingBottom: "9%",
+        }}
+      >
+        <button type="button" class="btn btn-danger">
+          View More{" "}
+        </button>
+        <div style={{ color: "white", paddingTop: "9%" }}>
+          {" "}
+          <h2>Our Process on Youtube</h2>{" "}
+        </div>
+      </div>
+      <div class="col-md-2" style={{ backgroundColor: "navy" }}></div>
+      <div
+        class="col-md-12"
+        style={{
+          backgroundColor: "navy",
+          alignContent: "center",
+          justifyContent: "center",
+          paddingRight: "20%",
+          paddingLeft: "20%",
+        }}
+      >
+        <Player
+          playsInline
+          poster="/assets/poster.png"
+          src="https://www.youtube.com/embed/A6WEAuSvcgY"
+        />
+      </div>
+    
     </div>
   );
 }
