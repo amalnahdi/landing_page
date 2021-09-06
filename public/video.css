@@ -543,7 +543,7 @@ body.video-react-full-window .video-react-fullscreen {
   cursor: pointer;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: e;
   top: 0;
   right: 0;
   bottom: 0;

@@ -80,3 +80,9 @@ img{
   border-radius: 16px;
   box-shadow: 0 0 12px 1px rgb(0 0 0 / 5%);
 }
+button {
+  all: unset;
+  color: blue;
+  -webkit-text-fill-color: blue;
+  cursor: pointer;
+}

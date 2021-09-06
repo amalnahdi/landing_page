@@ -1,6 +1,6 @@
 import { ReactComponent as ReactLogo } from "./abc.svg";
 import "./App.css";
-
+import { useState } from "react";
 import { Player } from "video-react";
 
 const Nav = () => {
@@ -108,6 +108,16 @@ const Nav = () => {
   );
 };
 function App() {
+  const [count, SetCounter] = useState(0);
+const NextSlide=()=>{
+  if((count+1)>slider.length-1){
+    SetCounter(0)
+    
+  }
+  else{
+    SetCounter(count+1)
+  }
+}
   const cards = [
     [
       {
@@ -140,6 +150,7 @@ function App() {
       },
     ],
   ];
+
   const texts = [
     {
       title: "Create design projects",
@@ -155,6 +166,24 @@ function App() {
       title: "Complete & download",
       content:
         "Submit as many job requests as you want. We'll then assign you your personal designers and project manager to work on these requests",
+    },
+  ];
+  const slider = [
+    {
+      image: "p1.png",
+      username: "BASHIR KHAIRY  ",
+      role: "founder",
+      content: `I have nothing but praise for the Pixel True team and their services. The project manager coordinates everything very well and all the designers are on the same page.
+
+      The most important part of this plan is the amazing level of skill and talent all of the designers have. I honestly think the pricing is too low for the quality of work that is provided`,
+    },
+    {
+      image: "p1.png",
+      username: "counter2  ",
+      role: "founder",
+      content: `I have nothing but praise for the Pixel True team and their services. The project manager coordinates everything very well and all the designers are on the same page.
+
+      The most important part of this plan is the amazing level of skill and talent all of the designers have. I honestly think the pricing is too low for the quality of work that is provided`,
     },
   ];
   return (
@@ -457,7 +486,87 @@ function App() {
           src="https://www.youtube.com/embed/A6WEAuSvcgY"
         />
       </div>
-    
+        <div className='col-md-12' style={{paddingTop:'1%',paddingBottom:'1%',display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'navy'}}
+        >
+              <button onClick={()=>{
+        NextSlide()
+}}>   
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"  style={{ height:"120",
+                     color:'#87CEEB'}}>
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+</svg>
+</button>
+      <div
+        class=" card margin gif"
+        style={{
+          borderWidth:"0",
+          backgroundImage:`url("./box.svg")` ,
+          backgroundSize: "cover",
+          backgroundColor:'inherit',
+          display:'flex',
+          width: "600px",
+          height: "400px",
+          justifyContent: "center",
+          paddingBottom: "9%",
+          paddingTop: "9%",
+          position: "relative",
+          alignSelf: "center",
+        }}
+      >
+        
+        <div className='row'>
+        <div
+          className="col-md-2 image"
+          style={{justifyContent:'flex-start',alignItems:'center'}}
+         
+        >
+          <div style={{height:"100px",width:'100px',borderRadius:'50%',
+          backgroundImage:`url("./p1.png")` ,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          alignSelf:"center",
+          marginLeft:"30%"
+
+        
+        }}>
+
+          </div>
+        </div>
+        <div
+          className="col-md-10"
+         
+        >
+          <h5 style={{ color: "white" }}>{slider[count].username} </h5>
+
+          <h5 style={{ color: "#87CEEB" }}>founder </h5>
+          <h6
+          style={{ color: "white", justifyContent: "center", marginTop: "20%" }}
+        >
+          Pixel True have been fantastic. I get complimented all the time on our
+          illustrations, and I don't think my brand would be half as
+          recognisable without them.
+        </h6>
+        </div>
+        </div>
+        
+      </div>
+<button onClick={()=>{
+        NextSlide()
+}}>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{
+                height:"120",
+                 color:'#87CEEB'
+                     }}>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+</button>
+      </div>
+
+      <h2 style={{ color: "white " }}> Membership benefits</h2>
+     
+     
+
+
     </div>
   );
 }
