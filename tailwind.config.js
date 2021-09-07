@@ -1,18 +1,23 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       transitionProperty: {
         'width': 'width',
         
-    },
+    }
+   
     // opacity: ['group-hover'],
 
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringOpacity: ['hover','active'],
+      ringColor:['hover']
+
+    },
   },
   plugins: [],
 }
