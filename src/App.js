@@ -564,7 +564,16 @@ const NextSlide=()=>{
 
       <h2 style={{ color: "white " }}> Membership benefits</h2>
      
-     
+      <div class="row d-flex">
+        <div class="col-sm-6 d-flex justify-content-end bg-dark ">
+          
+        </div>
+        <div class="col-sm-6 d-flex justify-content-start">sdfdsf</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">sdfsdf</div>
+        <div class="col-sm-6">sdfsdfsfdd</div>
+    </div>
 
 
     </div>
