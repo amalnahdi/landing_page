@@ -563,19 +563,67 @@ const NextSlide=()=>{
       </div>
 
       <h2 style={{ color: "white " }}> Membership benefits</h2>
-     
+     <div style={{backgroundColor:'navy'}}>
       <div class="row d-flex">
-        <div class="col-sm-6 d-flex justify-content-end bg-dark ">
-          
-        </div>
-        <div class="col-sm-6 d-flex justify-content-start">sdfdsf</div>
+        <div class="col-sm-6 d-flex justify-content-end " style={{
+          borderWidth:"0",
+          backgroundImage:`url("./box.svg")` ,
+          backgroundSize: "cover",
+          backgroundColor:'inherit',
+          display:'flex',
+          width: "10px",
+          height: "10px",
+          justifyContent: "center",
+          paddingBottom: "9%",
+          paddingTop: "9%",
+          color:'white'
+          }}>
+            <h4 >Fast turnaround</h4><p>Get your designs back on average in 2-3 days.</p> </div>
+
+        <div class="col-sm-6 d-flex justify-content-start" style={{
+           borderWidth:"0",
+           backgroundImage:`url("./box.svg")` ,
+           backgroundSize: "cover",
+           backgroundColor:'inherit',
+           display:'flex',
+           width: "10px",
+           height: "10px",
+           justifyContent: "center",
+           paddingBottom: "9%",
+           paddingTop: "9%"
+        }}>
+          <h4>Human support</h4><p>Dedicated Project Manager to ensure smooth delivery of design projects.</p></div>
     </div>
     <div class="row">
-        <div class="col-sm-6">sdfsdf</div>
-        <div class="col-sm-6">sdfsdfsfdd</div>
+        <div class="col-sm-6" style={{
+           borderWidth:"0",
+           backgroundImage:`url("./box.svg")` ,
+           backgroundSize: "cover",
+           backgroundColor:'inherit',
+           display:'flex',
+           width: "10px",
+           height: "10px",
+           justifyContent: "center",
+           paddingBottom: "9%",
+           paddingTop: "9%"
+        }}>
+          <h4>Team collaboration</h4><p>Work directly with your new design team and project manager.</p></div>
+
+        <div class="col-sm-6" style={{ borderWidth:"0",
+          backgroundImage:`url("./box.svg")` ,
+          backgroundSize: "cover",
+          backgroundColor:'inherit',
+          display:'flex',
+          width: "10px",
+          height: "10px",
+          justifyContent: "center",
+          paddingBottom: "9%",
+          paddingTop: "9%"
+          }}>
+            <h4>Ownership of files</h4><p>Have 100% ownership of all original source files created for your project.</p></div>
     </div>
 
-
+    </div>
     </div>
   );
 }
