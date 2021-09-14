@@ -109,15 +109,13 @@ const Nav = () => {
 };
 function App() {
   const [count, SetCounter] = useState(0);
-const NextSlide=()=>{
-  if((count+1)>slider.length-1){
-    SetCounter(0)
-    
-  }
-  else{
-    SetCounter(count+1)
-  }
-}
+  const NextSlide = () => {
+    if (count + 1 > slider.length - 1) {
+      SetCounter(0);
+    } else {
+      SetCounter(count + 1);
+    }
+  };
   const cards = [
     [
       {
@@ -230,18 +228,18 @@ const NextSlide=()=>{
           </div>
         </div>
       </div>
-      <div class="row" style={{ backgroundColor: "navy" }}>
+      <div class="row" style={{ backgroundColor: "#0F123D" }}>
         <div class="col-sm-1">educative </div>
         <div class="col-sm-1">steam</div>
         <div class="col-sm-1">liggrsystems</div>
         <div class="col-sm-1">bridgeprofits </div>
         <div class="col-sm-1">inquivix</div>
       </div>
-      <div class="row" style={{ color: "white", backgroundColor: "navy" }}>
+      <div class="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
         <div class="col-md-6">ggg</div>
         <div class="col-md-6">hhhh</div>
       </div>
-      <div class="row" style={{ color: "white", backgroundColor: "navy" }}>
+      <div class="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
         <div
           style={{
             alignContent: "center",
@@ -275,7 +273,7 @@ const NextSlide=()=>{
       <div
         class="row"
         style={{
-          backgroundColor: "navy",
+          backgroundColor: "#0F123D",
           alignContent: "center",
           justifyContent: "center",
           paddingTop: "9%",
@@ -290,7 +288,7 @@ const NextSlide=()=>{
           </div>
         </div>
       </div>
-      <div class="row" style={{ backgroundColor: "navy" }}>
+      <div class="row" style={{ backgroundColor: "#0F123D" }}>
         <div class="col-md-12" style={{ color: "white" }}>
           <div className="row">
             <div className="col-md-6">
@@ -304,40 +302,41 @@ const NextSlide=()=>{
               </p>
             </div>
             <div className="col-md-6">
-              <h1>Breath-taking Designs</h1>
+              <h1>Communication That Matters</h1>
               <p>
-                All of our designers are carefully vetted and have years of
-                experience working in the design industry. You’ll get a
-                dedicated UI Designer, Graphic Designer, Illustrator and Project
-                Manager. With a full design team, getting breath-taking designs
-                couldn't be any easier!{" "}
+                With a dedicated Project Manager who cares about your success
+                and direct live-chat access to your experienced designers,
+                communication issues will be no more!{" "}
               </p>
             </div>
           </div>
         </div>
-
         <div class="col-md-12" style={{ color: "white" }}>
-          <h2>Communication That Matters</h2>
-          <p>
-            With a dedicated Project Manager who cares about your success and
-            direct live-chat access to your experienced designers, communication
-            issues will be no more!
-          </p>
-        </div>
-        <div class="col-md-12" style={{ color: "white" }}>
-          <h2>No More Missed Deadlines</h2>
-          <p>
-            Need that design done on a specific date? You can trust us to
-            deliver it on time. Once we commit to a date, we'll get it done. Job
-            requests will on average be delivered in a few business days.
-            Simpler tasks such as graphic designs and revisions will be
-            delivered within 24 hours.
-          </p>
+          <div className="row">
+            <div className="col-md-6">
+              <h1>No More Missed Deadlines</h1>
+              <p>
+                Need that design done on a specific date? You can trust us to
+                deliver it on time. Once we commit to a date, we'll get it done.
+                Job requests will on average be delivered in a few business
+                days. Simpler tasks such as graphic designs and revisions will
+                be delivered within 24 hours.{" "}
+              </p>
+            </div>
+            <div className="col-md-6">
+              <h1>Communication That Matters</h1>
+              <p>
+                With a dedicated Project Manager who cares about your success
+                and direct live-chat access to your experienced designers,
+                communication issues will be no more{" "}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div
         className="row"
-        style={{ backgroundColor: "navy", color: "white", paddingTop: "5%" }}
+        style={{ backgroundColor: "#0F123D", color: "white", paddingTop: "5%" }}
       >
         <div className="col-md-3">
           <ReactLogo />
@@ -407,7 +406,7 @@ const NextSlide=()=>{
             style={{
               justifyContent: "space-around",
               alignItems: "flex-start",
-              backgroundColor: "navy",
+              backgroundColor: "#0F123D",
             }}
           >
             <div className="col-md-2"></div>
@@ -454,7 +453,7 @@ const NextSlide=()=>{
       })}
       <div
         style={{
-          backgroundColor: "navy",
+          backgroundColor: "#0F123D",
           alignContent: "center",
           justifyContent: "center",
           paddingTop: "9%",
@@ -469,11 +468,11 @@ const NextSlide=()=>{
           <h2>Our Process on Youtube</h2>{" "}
         </div>
       </div>
-      <div class="col-md-2" style={{ backgroundColor: "navy" }}></div>
+      <div class="col-md-2" style={{ backgroundColor: "#0F123D" }}></div>
       <div
         class="col-md-12"
         style={{
-          backgroundColor: "navy",
+          backgroundColor: "#0F123D",
           alignContent: "center",
           justifyContent: "center",
           paddingRight: "20%",
@@ -486,144 +485,223 @@ const NextSlide=()=>{
           src="https://www.youtube.com/embed/A6WEAuSvcgY"
         />
       </div>
-        <div className='col-md-12' style={{paddingTop:'1%',paddingBottom:'1%',display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'navy'}}
-        >
-              <button onClick={()=>{
-        NextSlide()
-}}>   
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"  style={{ height:"120",
-                     color:'#87CEEB'}}>
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
-</svg>
-</button>
       <div
-        class=" card margin gif"
+        className="col-md-12"
         style={{
-          borderWidth:"0",
-          backgroundImage:`url("./box.svg")` ,
-          backgroundSize: "cover",
-          backgroundColor:'inherit',
-          display:'flex',
-          width: "600px",
-          height: "400px",
+          paddingTop: "1%",
+          paddingBottom: "1%",
+          display: "flex",
           justifyContent: "center",
-          paddingBottom: "9%",
-          paddingTop: "9%",
-          position: "relative",
-          alignSelf: "center",
+          alignItems: "center",
+          backgroundColor: "#0F123D",
         }}
       >
-        
-        <div className='row'>
-        <div
-          className="col-md-2 image"
-          style={{justifyContent:'flex-start',alignItems:'center'}}
-         
+        <button
+          onClick={() => {
+            NextSlide();
+          }}
         >
-          <div style={{height:"100px",width:'100px',borderRadius:'50%',
-          backgroundImage:`url("./p1.png")` ,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          alignSelf:"center",
-          marginLeft:"30%"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            style={{ height: "120", color: "#87CEEB" }}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+            />
+          </svg>
+        </button>
+        <div
+          class=" card margin gif"
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundSize: "cover",
+            backgroundColor: "inherit",
+            display: "flex",
+            width: "600px",
+            height: "400px",
+            justifyContent: "center",
+            paddingBottom: "9%",
+            paddingTop: "9%",
+            position: "relative",
+            alignSelf: "center",
+          }}
+        >
+          <div className="row">
+            <div
+              className="col-md-2 image"
+              style={{ justifyContent: "flex-start", alignItems: "center" }}
+            >
+              <div
+                style={{
+                  height: "100px",
+                  width: "100px",
+                  borderRadius: "50%",
+                  backgroundImage: `url("./p1.png")`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  alignSelf: "center",
+                  marginLeft: "30%",
+                }}
+              ></div>
+            </div>
+            <div className="col-md-10">
+              <h5 style={{ color: "white" }}>{slider[count].username} </h5>
 
-        
-        }}>
-
+              <h5 style={{ color: "#87CEEB" }}>founder </h5>
+              <h6
+                style={{
+                  color: "white",
+                  justifyContent: "center",
+                  marginTop: "20%",
+                }}
+              >
+                Pixel True have been fantastic. I get complimented all the time
+                on our illustrations, and I don't think my brand would be half
+                as recognisable without them.
+              </h6>
+            </div>
           </div>
         </div>
-        <div
-          className="col-md-10"
-         
+        <button
+          onClick={() => {
+            NextSlide();
+          }}
         >
-          <h5 style={{ color: "white" }}>{slider[count].username} </h5>
-
-          <h5 style={{ color: "#87CEEB" }}>founder </h5>
-          <h6
-          style={{ color: "white", justifyContent: "center", marginTop: "20%" }}
-        >
-          Pixel True have been fantastic. I get complimented all the time on our
-          illustrations, and I don't think my brand would be half as
-          recognisable without them.
-        </h6>
-        </div>
-        </div>
-        
-      </div>
-<button onClick={()=>{
-        NextSlide()
-}}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{
-                height:"120",
-                 color:'#87CEEB'
-                     }}>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-</button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            style={{
+              height: "120",
+              color: "#87CEEB",
+            }}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </button>
       </div>
 
-      <h2 style={{ color: "white " }}> Membership benefits</h2>
-     <div style={{backgroundColor:'navy'}}>
-      <div class="row d-flex">
-        <div class="col-sm-6 d-flex justify-content-end " style={{
-          borderWidth:"0",
-          backgroundImage:`url("./box.svg")` ,
-          backgroundSize: "cover",
-          backgroundColor:'inherit',
-          display:'flex',
-          width: "10px",
-          height: "10px",
-          justifyContent: "center",
-          paddingBottom: "9%",
-          paddingTop: "9%",
-          color:'white'
-          }}>
-            <h4 >Fast turnaround</h4><p>Get your designs back on average in 2-3 days.</p> </div>
+      <div style={{ backgroundColor: "#0F123D" }}>
+        <h2 style={{ color: "white " }}> Membership benefits</h2>
 
-        <div class="col-sm-6 d-flex justify-content-start" style={{
-           borderWidth:"0",
-           backgroundImage:`url("./box.svg")` ,
-           backgroundSize: "cover",
-           backgroundColor:'inherit',
-           display:'flex',
-           width: "10px",
-           height: "10px",
-           justifyContent: "center",
-           paddingBottom: "9%",
-           paddingTop: "9%"
-        }}>
-          <h4>Human support</h4><p>Dedicated Project Manager to ensure smooth delivery of design projects.</p></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6" style={{
-           borderWidth:"0",
-           backgroundImage:`url("./box.svg")` ,
-           backgroundSize: "cover",
-           backgroundColor:'inherit',
-           display:'flex',
-           width: "10px",
-           height: "10px",
-           justifyContent: "center",
-           paddingBottom: "9%",
-           paddingTop: "9%"
-        }}>
-          <h4>Team collaboration</h4><p>Work directly with your new design team and project manager.</p></div>
+        <div class="row d-flex">
+          <div className="col-md-6  flex-col  " style={{ float: "right" }}>
+            <div
+              className="ml-auto"
+              style={{
+                borderWidth: "0",
+                backgroundImage: `url("./box.svg")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
 
-        <div class="col-sm-6" style={{ borderWidth:"0",
-          backgroundImage:`url("./box.svg")` ,
-          backgroundSize: "cover",
-          backgroundColor:'inherit',
-          display:'flex',
-          width: "10px",
-          height: "10px",
-          justifyContent: "center",
-          paddingBottom: "9%",
-          paddingTop: "9%"
-          }}>
-            <h4>Ownership of files</h4><p>Have 100% ownership of all original source files created for your project.</p></div>
-    </div>
+                width: "auto",
+                height: "200px",
+                maxheight: "200px",
+                maxWidth: "70%",
 
-    </div>
+                alignItems: "center",
+                padding: "9%",
+              }}
+            >
+              <h4>sddsffsdfdf</h4>
+              <h4>sddsffsdfdf</h4>
+            </div>
+
+            <div
+              className="ml-auto"
+              style={{
+                borderWidth: "0",
+                backgroundImage: `url("./box.svg")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+
+                width: "auto",
+                height: "200px",
+                maxheight: "200px",
+                maxWidth: "70%",
+
+                alignItems: "center",
+                padding: "9%",
+              }}
+            >
+              <h4>sddsffsdfdf</h4>
+              <h4>sddsffsdfdf</h4>
+            </div> 
+
+
+            
+
+
+          </div>
+          <div className="col-md-6 flex-col ">
+            <div
+              className="mr-auto"
+              style={{
+                borderWidth: "0",
+                backgroundImage: `url("./box.svg")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+
+                width: "auto",
+                height: "200px",
+                maxheight: "200px",
+                maxWidth: "70%",
+
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "9%",
+              }}
+            >
+              <h4>sddsffsdfdf</h4>
+              <h4>sddsffsdfdf</h4>
+            </div>
+            <div
+              className="mr-auto"
+              style={{
+                borderWidth: "0",
+                backgroundImage: `url("./box.svg")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+
+                width: "auto",
+                height: "200px",
+                maxheight: "200px",
+                maxWidth: "70%",
+
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "9%",
+              }}
+            >
+              <h4>sddsffsdfdf</h4>
+              <h4>sddsffsdfdf</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='row p-1 mx-auto '>
+              <div className='col-md-10 offset-1' style={{
+                height:"400px",
+                backgroundImage:`url('./bg.png')`,
+                backgroundSize:'100% 100%',
+                backgroundRepeat:'no-repeat'
+              }}>
+              </div>
+      </div>
     </div>
   );
 }
