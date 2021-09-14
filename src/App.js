@@ -617,8 +617,8 @@ function App() {
                 padding: "9%",
               }}
             >
-              <h4>sddsffsdfdf</h4>
-              <h4>sddsffsdfdf</h4>
+              <h3 >Fast turnaround</h3>
+              <h6 >Get your designs back on average in 2-3 days.</h6>
             </div>
 
             <div
@@ -638,8 +638,8 @@ function App() {
                 padding: "9%",
               }}
             >
-              <h4>sddsffsdfdf</h4>
-              <h4>sddsffsdfdf</h4>
+              <h3>Human support</h3>
+              <h6>Dedicated Project Manager to ensure smooth delivery of design projects.</h6>
             </div> 
 
 
@@ -666,8 +666,8 @@ function App() {
                 padding: "9%",
               }}
             >
-              <h4>sddsffsdfdf</h4>
-              <h4>sddsffsdfdf</h4>
+              <h3>Team collaboration</h3>
+              <h4> Work directly with your new design team and project manager.</h4>
             </div>
             <div
               className="mr-auto"
@@ -687,22 +687,148 @@ function App() {
                 padding: "9%",
               }}
             >
-              <h4>sddsffsdfdf</h4>
-              <h4>sddsffsdfdf</h4>
+              <h4>Ownership of files</h4>
+              <h4>Have 100% ownership of all original source files created for your project.</h4>
             </div>
           </div>
         </div>
       </div>
-      <div className='row p-1 mx-auto '>
+      <div className='row p-1 mx-auto d-flex' style={{backgroundcolor:'navy'}} >
               <div className='col-md-10 offset-1' style={{
                 height:"400px",
                 backgroundImage:`url('./bg.png')`,
                 backgroundSize:'100% 100%',
-                backgroundRepeat:'no-repeat'
+                backgroundRepeat:'no-repeat',
+                justifyContent:'center',alignItems:'center',
+                display:'flex'  
               }}>
+                <div  style={{justifyContent:'center',alignItems:'center'}}>
+                         <h4> Try us out risk free! </h4>  <h6> All our plans are backed by a  </h6> 
+                           <h6>14 day money-back guarantee. </h6>
+                             <button type="button" class="btn btn-danger" style={{alignSelf:'center'}}>
+                                   see pricing{" "}
+                                 </button>
+
+                 </div>
               </div>
-      </div>
+       </div>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    
+
+    <div style={{backgroundcolor:'navy'}}>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
+  </section>
+
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+          Get actionable tips on how to increase sales and conversions with design!
+          <button type="button" class="btn btn-danger" style={{alignSelf:'center'}}>
+                                   see pricing{" "}
+                                 </button>
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+          Services
+
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Our Platform</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Testimonials</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">our work</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">pricing</a>
+            <a href="#!" class="text-reset">schedule a demo</a>
+            
+          
+          </p>
+        </div>
+
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+          Company
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">about us </a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Case Studies</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">License</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">FAQs</a>
+            <a href="#!" class="text-reset">Refund Policy</a>
+
+          </p>
+        </div>
+
+
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+          Resources
+          </h6>
+          <p><i class="fas fa-home me-3"></i> 
+support@pixeltrue.com
+</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            160 Robinson Road, #14-04 Singapore Business Federation Centre
+          </p>
+        </div>
+      
+      </div>
+     
+    </div>
+  </section>
+
+  <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
+    2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">All Rights Reserved PIXEL TRUE STUDIO PTE. LTD 2019-2021</a>
+  </div>
+</footer>
+</div>
+       
+
   );
 }
 

@@ -45,13 +45,27 @@ html, body {
     border-radius: 45px;
     background-color: #fd435a;
     box-shadow: 0 0 0 6px rgb(253 87 108 / 25%);
+    border-width: 0px;
+    border: 0px;
 
  
   margin-right: 1% !important;
+
 }
+.btn-danger:hover{
+    background-color:#fd435a ;
+    /* box-shadow: 0 0 0 7px rgb(253 87 108 / 25%);
+     */
+    box-shadow: 0 0 0 6px rgb(253 87 108 / 50%);
+
+
+ 
+}
+ 
 h1{color:white;}
 h5{color: white;}
 h4{color:white;} 
+h6{color:white;}
 
 .div-block-305 {
   display: flex;
@@ -83,7 +97,7 @@ img{
 }
 button {
   all: unset;
-  color: blue;
-  -webkit-text-fill-color: blue;
+  color: white;
+  -webkit-text-fill-color: white;
   cursor: pointer;
 }
