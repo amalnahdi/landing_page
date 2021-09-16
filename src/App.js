@@ -13,7 +13,7 @@ import { Player } from "video-react";
 import axios from 'axios'
 const CardDone=()=>{
   return(
-    <div class="d-flex flex-col col-md-3 test" 
+    <div className="d-flex flex-col col-md-3 test" 
     >
 
           <Svg4  style={{
@@ -46,7 +46,7 @@ const CardDone=()=>{
 
 const CardDtwo=()=>{
   return(
-    <div class="d-flex flex-col col-md-3 test" 
+    <div className="d-flex flex-col col-md-3 test" 
     >
 
           <Svg5  style={{
@@ -79,7 +79,7 @@ const CardDtwo=()=>{
 
 const CardDth=()=>{
   return(
-    <div class="d-flex flex-col col-md-3 test" 
+    <div className="d-flex flex-col col-md-3 test" 
     >
 
           <Svg6 style={{
@@ -112,15 +112,15 @@ const CardDth=()=>{
 const Nav = () => {
   return (
     <nav
-      class="navbar navbar-expand-lg navbar-light "
+      className="navbar navbar-expand-lg navbar-light "
       style={{ backgroundColor: "#663B74 !important" }}
     >
-      <a class="navbar-brand " href="#" style={{color:'white'}}>
+      <a className="navbar-brand " href="#" style={{color:'white'}}>
         <strong>Pixeltrue</strong> 
       </a>
 
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNavDropdown"
@@ -128,34 +128,34 @@ const Nav = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse d-flex justify-content-end " id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#" style={{color:'white'}}>
-              Case studying <span class="sr-only">(current)</span>
+      <div className="collapse navbar-collapse d-flex justify-content-end " id="navbarNavDropdown">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="#" style={{color:'white'}}>
+              Case studying <span className="sr-only">(current)</span>
             </a>
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="#" style={{color:'white'}}>
+          <li className="nav-item ">
+            <a className="nav-link" href="#" style={{color:'white'}}>
               pricing
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#" style={{color:'white'}}>
+          <li className="nav-item ">
+            <a className="nav-link" href="#" style={{color:'white'}}>
               Our Work
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#" style={{color:'white'}}>
+          <li className="nav-item ">
+            <a className="nav-link" href="#" style={{color:'white'}}>
               Our Platform
             </a>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdownMenuLink"
               role="button"
@@ -166,21 +166,21 @@ const Nav = () => {
             >
               More
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#" style={{color:'white'}}>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a className="dropdown-item" href="#" style={{color:'white'}}>
                 Action
               </a>
-              <a class="dropdown-item" href="#" style={{color:'white'}}>
+              <a className="dropdown-item" href="#" style={{color:'white'}}>
                 Another action
               </a>
-              <a class="dropdown-item" href="#" style={{color:'white'}}>
+              <a className="dropdown-item" href="#" style={{color:'white'}}>
                 Something else here
               </a>
             </div>
           </li>
-          <li class="nav-item dropdown"style={{color:'white'}}>
+          <li className="nav-item dropdown"style={{color:'white'}}>
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdownMenuLink"
               role="button"
@@ -191,14 +191,14 @@ const Nav = () => {
             >
               Login
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#" style={{color:'white'}}>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a className="dropdown-item" href="#" style={{color:'white'}}>
                 Action
               </a>
-              <a class="dropdown-item" href="#" style={{color:'white'}}>
+              <a className="dropdown-item" href="#" style={{color:'white'}}>
                 Another action
               </a>
-              <a class="dropdown-item" href="#" style={{color:'white'}}>
+              <a className="dropdown-item" href="#" style={{color:'white'}}>
                 Something else here
               </a>
             </div>
@@ -206,27 +206,187 @@ const Nav = () => {
         </ul>
       </div>
 
-      <button type="button" class="btn btn-danger">
+      <button type="button" className="btn btn-danger ml-2" style={{
+        height:"30%",
+        width:'10%'
+      }}>
         schedule Demo{" "}
       </button>
 
-      {/* <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/> */}
-      {/* <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> */}
+      {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/> */}
+      {/* <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> */}
     </nav>
   );
 };
-function App() {
-  const [count, SetCounter] = useState(0);
-  const [texts, setTexts] = useState([]);
-  const [animate, setAniamte] = useState("slide0");
+const SectionOne=()=>{
+return(
+  <div className="row">
+  <div className="bg col-md-12">
+    <Nav />
 
-  const NextSlide = () => {
-    if (count + 1 > slider.length - 1) {
-      SetCounter(0);
-    } else {
-      SetCounter(count + 1);
-    }
-  };
+    <div
+      style={{
+        alignContent: "center",
+        justifyContent: "center",
+        marginTop: "9%",
+        marginBottom: "9%",
+      }}
+    >
+      <h1>Get A Superhero Design Team</h1>
+      <h1> To Grow Your Business</h1>
+    </div>
+    <div
+      style={{
+        alignContent: "center",
+        justifyContent: "center",
+        marginTop: "9%",
+        marginBottom: "9%",
+      }}
+    >
+      <h5>
+        {" "}
+        We provide an experienced design team that works with you everyday
+      </h5>{" "}
+      <h5>
+        {" "}
+        to create high-quality design assets to help grow your business.
+        Zero
+      </h5>{" "}
+      <h5> headaches, fixed pricing and no contracts. </h5>
+      <button type="button" className="btn btn-danger">
+        see our pricing{" "}
+      </button>
+    </div>
+  </div>
+</div>
+)
+}
+const SectionTwo=()=>{
+  return(
+    <>
+          <div className="row" style={{ backgroundColor: "#0F123D" , color:'grey' }}>
+        <div className="col-sm-2"><strong>educative</strong> </div>
+        <div className="col-sm-2"><strong>steam</strong></div>
+        <div className="col-sm-2"><strong>liggrsystems</strong></div>
+        <div className="col-sm-2"><strong>bridgeprofits</strong> </div>
+        <div className="col-sm-2"><strong>inquivix</strong></div>
+     
+      </div>
+
+      <div className="row" style={{ color: "grey", backgroundColor: "#0F123D" }}>
+        <div className="col-md-6 text-muted "><p><strong>many requests</strong></p></div>
+        <div className="col-md-6 text-muted" style={{color:"grey"}}><p><strong> many requests</strong></p></div>
+        
+     
+      </div>
+      
+      <div className="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
+        <div 
+        className="align-self-end"
+          style={{
+            alignContent: "center",
+            justifyContent: "center",
+            marginTop: "9%",
+            marginBottom: "9%",
+            color: "white",
+            marginLeft: "35%",
+            marginRight: "25%",
+          }}
+        >
+          <h2>We get it. Reliable designers</h2>{" "}
+          <div style={{ color: "#87CEEB" }}>
+            <h2>are hard to find.</h2>
+          </div>
+        </div>
+<div className="d-flex justify-content-around pl-5">
+<CardDone/>
+<CardDtwo/>
+<CardDth/>
+       
+      
+      </div>
+      </div>
+    </>
+  )
+}
+const SectionThree=()=>{
+  return(
+    <>
+         <div
+        className="row"
+        style={{
+          backgroundColor: "#0F123D",
+          alignContent: "center",
+          justifyContent: "center",
+          paddingTop: "9%",
+          paddingBottom: "9%",
+          color: "white",
+        }}
+      >
+        <div className="col-md-12">
+          <h2>Design doesn’t have to be hard.</h2>{" "}
+          <div style={{ color: "#87CEEB" }}>
+            <h2>We make it easy.</h2>
+          </div>
+        </div>
+      </div>
+      <div className="row" style={{ backgroundColor: "#0F123D" }}>
+        <div className="col-md-12" style={{ color: "white" }}>
+          <div className="row">
+            <div class= "d-flex justify-content-start">
+            <div className="col-md-6 my-auto  justify-content-center">
+              <h1>Breath-taking Designs</h1>
+              <p >With faded secondary text
+                All of our designers are carefully vetted and have years of
+                experience working in the design industry. You’ll get a
+                dedicated UI Designer, Graphic Designer, Illustrator and Project
+                Manager. With a full design team, getting breath-taking designs
+                couldn't be any easier!{" "}
+                </p>
+              </div>
+              <div className='col-md-6'>
+                <Svg1/>
+              </div>
+            </div>
+            </div>
+
+
+<div className='row d-flex'>
+            <div className=" col-md-6">
+            <Svg3/>
+           </div>     
+            <div className="col-md-6  my-auto d-flex justify-content-center " style={{justifyContent:'center',alignItems:'center',display:"center",flexDirection:'column'}}> 
+             <h1>Communication That Matters</h1> 
+      
+             <p>
+                With a dedicated Project Manager who cares about your success
+                and direct live-chat access to your experienced designers,
+                communication issues will be no more!{" "}
+                </p>
+            </div>
+            
+            </div>
+            <div className='row d-flex ' style={{flexDirection:'row-reverse'}}>
+            <div className=" col-md-6">
+            <Svg2/>
+           </div>     
+            <div className="col-md-6  my-auto d-flex justify-content-center " style={{justifyContent:'center',alignItems:'center',display:"center",flexDirection:'column'}}> 
+             <h1>Communication That Matters</h1> 
+      
+              <p>
+                With a dedicated Project Manager who cares about your success
+                and direct live-chat access to your experienced designers,
+                communication issues will be no more!{" "}
+              </p>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+    </>
+  )
+}
+const SectionFive=()=>{
   const cards = [
     [
       {
@@ -259,18 +419,106 @@ function App() {
       },
     ],
   ];
-const fetchData=async ()=>{
-let text=await axios.get('https://protected-shore-14845.herokuapp.com/text')
-setTexts(text.data.data)}
-useEffect(()=>{
-  // setTimeout(()=>{
-  //   fetchData()
+  return(
+      <>
+    {cards.map((card) => {
+      return (
+        <div
+          className="row bgc"
+          style={{
+            display:'flex',
+            justifyContent: "space-betweens",
+            alignItems: "flex-start",
 
-  // },3000)
-  setInterval(() => {
-    // NextSlide()
-  }, 2000);
-})
+          }}
+        >
+      
+
+          {card.map((c) => {
+            return (
+              <div className="col-md-4 offset-1 mr-auto mb-5" style={{ position: "relative" }}>
+                <div
+                  className="card margin gif"
+                  id="a"
+                  style={{
+                    width: "450px",
+                    height: "400px",
+                    position: "relative",
+                    backgroundImage: "url(" + c.image + ")",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                />
+                <div
+                  className="title"
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    position: "absolute",
+                    top: "5%",
+                    left: "6%",
+                    backgroundColor: "white",
+                    padding: "1%",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    borderRadius: "15px",
+                  }}
+                >
+                  <span>{c.description}</span>
+                </div>
+              </div>
+            );
+          })}
+          
+        </div>
+      );
+    })}
+    <div
+      style={{
+        backgroundColor: "#0F123D",
+        alignContent: "center",
+        justifyContent: "center",
+        paddingTop: "9%",
+        paddingBottom: "9%",
+      }}
+    >
+      <button type="button" className="btn btn-danger">
+        View More{" "}
+      </button>
+    
+    </div>
+    </>
+  )
+}
+const SectionSix=()=>{
+  return(
+    <>
+ <div
+        className="col-md-12"
+        style={{
+          backgroundColor: "#0F123D",
+          alignContent: "center",
+          justifyContent: "center",
+          paddingRight: "20%",
+          paddingLeft: "20%",
+        }}
+      >
+        <div style={{ color: "white", paddingTop: "9%" ,marginBottom:'10%'}}>
+          {" "}
+          <h2>Our Process on Youtube</h2>{" "}
+        </div>
+        <Player
+          playsInline
+          poster="/assets/poster.png"
+          src="https://www.youtube.com/embed/A6WEAuSvcgY"
+        />
+      </div>
+    </>
+  )
+}
+const SectionSeven=()=>{
+  const [count, SetCounter] = useState(0);
 
   const slider = [
     {
@@ -290,316 +538,16 @@ useEffect(()=>{
       The most important part of this plan is the amazing level of skill and talent all of the designers have. I honestly think the pricing is too low for the quality of work that is provided`,
     },
   ];
-  return (
-    <div
-      className="App container-fluid"
-      style={{ padding: "0px", margin: "0px" }}
-    >
-      <div className="row">
-        <div className="bg col-md-12">
-          <Nav />
-
-          <div
-            style={{
-              alignContent: "center",
-              justifyContent: "center",
-              marginTop: "9%",
-              marginBottom: "9%",
-            }}
-          >
-            <h1>Get A Superhero Design Team</h1>
-            <h1> To Grow Your Business</h1>
-          </div>
-          <div
-            style={{
-              alignContent: "center",
-              justifyContent: "center",
-              marginTop: "9%",
-              marginBottom: "9%",
-            }}
-          >
-            <h5>
-              {" "}
-              We provide an experienced design team that works with you everyday
-            </h5>{" "}
-            <h5>
-              {" "}
-              to create high-quality design assets to help grow your business.
-              Zero
-            </h5>{" "}
-            <h5> headaches, fixed pricing and no contracts. </h5>
-            <button type="button" class="btn btn-danger">
-              see our pricing{" "}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style={{ backgroundColor: "#0F123D" , color:'grey' }}>
-        <div class="col-sm-2"><strong>educative</strong> </div>
-        <div class="col-sm-2"><strong>steam</strong></div>
-        <div class="col-sm-2"><strong>liggrsystems</strong></div>
-        <div class="col-sm-2"><strong>bridgeprofits</strong> </div>
-        <div class="col-sm-2"><strong>inquivix</strong></div>
-     
-      </div>
-      <div class="row" style={{ color: "grey", backgroundColor: "#0F123D" }}>
-        <div class="col-md-6 text-muted "><p><strong>many requests</strong></p></div>
-        <div class="col-md-6 text-muted" style={{color:"grey"}}><p><strong> many requests</strong></p></div>
-        
-     
-      </div>
-      <div class="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
-        <div 
-        class="align-self-end"
-          style={{
-            alignContent: "center",
-            justifyContent: "center",
-            marginTop: "9%",
-            marginBottom: "9%",
-            color: "white",
-            marginLeft: "35%",
-            marginRight: "25%",
-          }}
-        >
-          <h2>We get it. Reliable designers</h2>{" "}
-          <div style={{ color: "#87CEEB" }}>
-            <h2>are hard to find.</h2>
-          </div>
-        </div>
-<div class="d-flex justify-content-around pl-5">
-<CardDone/>
-<CardDtwo/>
-<CardDth/>
-       
-      
-      </div>
-      </div>
-      <div
-        class="row"
-        style={{
-          backgroundColor: "#0F123D",
-          alignContent: "center",
-          justifyContent: "center",
-          paddingTop: "9%",
-          paddingBottom: "9%",
-          color: "white",
-        }}
-      >
-        <div className="col-md-12">
-          <h2>Design doesn’t have to be hard.</h2>{" "}
-          <div style={{ color: "#87CEEB" }}>
-            <h2>We make it easy.</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row" style={{ backgroundColor: "#0F123D" }}>
-        <div class="col-md-12" style={{ color: "white" }}>
-          <div className="row">
-            <div class= "d-flex justify-content-start">
-            <div className="col-md-6 my-auto  justify-content-center">
-              <h1>Breath-taking Designs</h1>
-              <p >With faded secondary text
-                All of our designers are carefully vetted and have years of
-                experience working in the design industry. You’ll get a
-                dedicated UI Designer, Graphic Designer, Illustrator and Project
-                Manager. With a full design team, getting breath-taking designs
-                couldn't be any easier!{" "}
-                </p>
-              </div>
-              <div className='col-md-6'>
-                <Svg1/>
-              </div>
-            </div>
-            </div>
-
-
-<div className='row d-flex'>
-            <div class=" col-md-6">
-            <Svg3/>
-           </div>     
-            <div className="col-md-6  my-auto d-flex justify-content-center " style={{justifyContent:'center',alignItems:'center',display:"center",flexDirection:'column'}}> 
-             <h1>Communication That Matters</h1> 
-      
-             <p>
-                With a dedicated Project Manager who cares about your success
-                and direct live-chat access to your experienced designers,
-                communication issues will be no more!{" "}
-                </p>
-            </div>
-            
-            </div>
-            <div className='row d-flex ' style={{flexDirection:'row-reverse'}}>
-            <div class=" col-md-6">
-            <Svg2/>
-           </div>     
-            <div className="col-md-6  my-auto d-flex justify-content-center " style={{justifyContent:'center',alignItems:'center',display:"center",flexDirection:'column'}}> 
-             <h1>Communication That Matters</h1> 
-      
-              <p>
-                With a dedicated Project Manager who cares about your success
-                and direct live-chat access to your experienced designers,
-                communication issues will be no more!{" "}
-              </p>
-            </div>
-            
-            </div>
-          </div>
-        </div>
-        
-      <div
-        className="row"
-        style={{ backgroundColor: "#0F123D", color: "white", paddingTop: "5%" }}
-      >
-        <div className="col-md-3">
-          <ReactLogo />
-        </div>
-        <div
-          className="col-md-9"
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            flexDirection: "column",
-            paddingBottom:"9%"
-          }}
-        >
-          
-          {
-            texts.map(text=>{
-              return(
-                <div class=" d-flex justify-content-center">
-                <div class="col-md-8" 
-                style={{
-                  borderWidth: "0",
-                  backgroundImage: `url("./box.svg")`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                   paddingBottom:"9%",
-                  width: "auto",
-                  height: "150px",
-                  maxheight: "50px",
-                  maxWidth: "70%", 
-                  paddingTop:"5%"
-                  }}>
-                  <h3>Create design projects</h3>{" "}
-                  <small>
-                    Submit as many job requests as you want. We'll then assign you
-                    your personal designers and project manager to work on these
-                    requests
-                  </small>
-                </div>
-              </div>
-              )
-            })
-          }
-          
-        </div>
-        <div className="col-md-12 mb-5">
-          <button
-            type="button"
-            class="btn btn-danger"
-            style={{ alignSelf: "center" }}
-          >
-            schedule Demo{" "}
-          </button>
-        </div>
-
-        <div className="col-md-12">
-          <div style={{ color: "#87CEEB" }}>
-            <h2>Custom Designs</h2>
-          </div>
-
-          <h5>
-            Crafted with skill and care to help our clients grow their business!
-          </h5>
-        </div>
-      </div>
-      {cards.map((card) => {
-        return (
-          <div
-            class="row"
-            style={{
-              justifyContent: "space-around",
-              alignItems: "flex-start",
-              backgroundColor: "#0F123D",
-            }}
-          >
-            <div className="col-md-2"></div>
-
-            {card.map((c) => {
-              return (
-                <div className="col-md-4 mb-2" style={{ position: "relative" }}>
-                  <div
-                    class="card margin gif"
-                    id="a"
-                    style={{
-                      width: "450px",
-                      height: "400px",
-                      position: "relative",
-                      backgroundImage: "url(" + c.image + ")",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover",
-                    }}
-                  ></div>
-                  <div
-                    className="title"
-                    style={{
-                      width: "auto",
-                      height: "auto",
-                      position: "absolute",
-                      top: "5%",
-                      left: "6%",
-                      backgroundColor: "white",
-                      padding: "1%",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      borderRadius: "15px",
-                    }}
-                  >
-                    <span>{c.description}</span>
-                  </div>
-                </div>
-              );
-            })}
-            <div className="col-md-2"></div>
-          </div>
-        );
-      })}
-      <div
-        style={{
-          backgroundColor: "#0F123D",
-          alignContent: "center",
-          justifyContent: "center",
-          paddingTop: "9%",
-          paddingBottom: "9%",
-        }}
-      >
-        <button type="button" class="btn btn-danger">
-          View More{" "}
-        </button>
-        <div style={{ color: "white", paddingTop: "9%" }}>
-          {" "}
-          <h2>Our Process on Youtube</h2>{" "}
-        </div>
-      </div>
-      <div class="col-md-2" style={{ backgroundColor: "#0F123D" }}></div>
-      <div
-        class="col-md-12"
-        style={{
-          backgroundColor: "#0F123D",
-          alignContent: "center",
-          justifyContent: "center",
-          paddingRight: "20%",
-          paddingLeft: "20%",
-        }}
-      >
-        <Player
-          playsInline
-          poster="/assets/poster.png"
-          src="https://www.youtube.com/embed/A6WEAuSvcgY"
-        />
-      </div>
+  const [animate, setAniamte] = useState("slide0");
+  const NextSlide = () => {
+    if (count + 1 > slider.length - 1) {
+      SetCounter(0);
+    } else {
+      SetCounter(count + 1);
+    }
+  };
+  return(
+    <>
       <div style={{ paddingTop: "1%",
           paddingBottom: "1%",
           display: "flex",
@@ -772,200 +720,212 @@ useEffect(()=>{
           </svg>
         </button>
       </div>
+  </>
+  )
+}
+const SectionEight=()=>{
+  return(
+    <div style={{ backgroundColor: "#0F123D" }}>
+    <h2 style={{ color: "white " }}> Membership benefits</h2>
 
-      <div style={{ backgroundColor: "#0F123D" }}>
-        <h2 style={{ color: "white " }}> Membership benefits</h2>
+    <div className="row d-flex">
+      <div className="col-md-6  flex-col  " style={{ float: "right" }}>
+        <div
+          className="ml-auto"
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
 
-        <div class="row d-flex">
-          <div className="col-md-6  flex-col  " style={{ float: "right" }}>
-            <div
-              className="ml-auto"
-              style={{
-                borderWidth: "0",
-                backgroundImage: `url("./box.svg")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
+            width: "auto",
+            height: "200px",
+            maxheight: "200px",
+            maxWidth: "70%",
 
-                width: "auto",
-                height: "200px",
-                maxheight: "200px",
-                maxWidth: "70%",
+            alignItems: "center",
+            padding: "9%",
+          }}
+        >
+          <h3 >Fast turnaround</h3>
+          <h6 >Get your designs back on average in 2-3 days.</h6>
+        </div>
 
-                alignItems: "center",
-                padding: "9%",
-              }}
-            >
-              <h3 >Fast turnaround</h3>
-              <h6 >Get your designs back on average in 2-3 days.</h6>
-            </div>
+        <div
+          className="ml-auto"
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
 
-            <div
-              className="ml-auto"
-              style={{
-                borderWidth: "0",
-                backgroundImage: `url("./box.svg")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
+            width: "auto",
+            height: "200px",
+            maxheight: "200px",
+            maxWidth: "70%",
 
-                width: "auto",
-                height: "200px",
-                maxheight: "200px",
-                maxWidth: "70%",
-
-                alignItems: "center",
-                padding: "9%",
-              }}
-            >
-              <h3>Human support</h3>
-              <h6>Dedicated Project Manager to ensure smooth delivery of design projects.</h6>
-            </div> 
+            alignItems: "center",
+            padding: "9%",
+          }}
+        >
+          <h3>Human support</h3>
+          <h6>Dedicated Project Manager to ensure smooth delivery of design projects.</h6>
+        </div> 
 
 
-            
+        
 
 
-          </div>
-          <div className="col-md-6 flex-col ">
-            <div
-              className="mr-auto"
-              style={{
-                borderWidth: "0",
-                backgroundImage: `url("./box.svg")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
+      </div>
+      <div className="col-md-6 flex-col ">
+        <div
+          className="mr-auto"
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
 
-                width: "auto",
-                height: "200px",
-                maxheight: "200px",
-                maxWidth: "70%",
+            width: "auto",
+            height: "200px",
+            maxheight: "200px",
+            maxWidth: "70%",
 
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "9%",
-              }}
-            >
-              <h3>Team collaboration</h3>
-              <h4> Work directly with your new design team and project manager.</h4>
-            </div>
-            <div
-              className="mr-auto"
-              style={{
-                borderWidth: "0",
-                backgroundImage: `url("./box.svg")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "9%",
+          }}
+        >
+          <h3>Team collaboration</h3>
+          <h4> Work directly with your new design team and project manager.</h4>
+        </div>
+        <div
+          className="mr-auto"
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
 
-                width: "auto",
-                height: "200px",
-                maxheight: "200px",
-                maxWidth: "70%",
+            width: "auto",
+            height: "200px",
+            maxheight: "200px",
+            maxWidth: "70%",
 
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "9%",
-              }}
-            >
-              <h4>Ownership of files</h4>
-              <h4>Have 100% ownership of all original source files created for your project.</h4>
-            </div>
-          </div>
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "9%",
+          }}
+        >
+          <h4>Ownership of files</h4>
+          <h4>Have 100% ownership of all original source files created for your project.</h4>
         </div>
       </div>
-      <div className='row p-1 mx-auto d-flex ' style={{backgroundColor:'#0F123D'}} >
-              <div className='col-md-10 offset-1' style={{
-                height:"400px",
-                backgroundImage:`url('./bg.png')`,
-                backgroundSize:'100% 100%',
-                backgroundRepeat:'no-repeat',
-                justifyContent:'center',alignItems:'center',
-                display:'flex'  
-              }}>
-                <div  style={{justifyContent:'center',alignItems:'center'}}>
-                         <h4> Try us out risk free! </h4>  <h6> All our plans are backed by a  </h6> 
-                           <h6>14 day money-back guarantee. </h6>
-                             <button type="button" class="btn btn-danger" style={{alignSelf:'center'}}>
-                                   see pricing{" "}
-                                 </button>
+    </div>
+  </div>
 
-                 </div>
-              </div>
+  )
+}
+const SectionNine=()=>{
+  return(
+    <div className='row p-1 mx-auto d-flex ' style={{backgroundColor:'#0F123D'}} >
+    <div className='col-md-10 offset-1' style={{
+      height:"400px",
+      backgroundImage:`url('./bg.png')`,
+      backgroundSize:'100% 100%',
+      backgroundRepeat:'no-repeat',
+      justifyContent:'center',alignItems:'center',
+      display:'flex'  
+    }}>
+      <div  style={{justifyContent:'center',alignItems:'center'}}>
+               <h4> Try us out risk free! </h4>  <h6> All our plans are backed by a  </h6> 
+                 <h6>14 day money-back guarantee. </h6>
+                   <button type="button" className="btn btn-danger" style={{alignSelf:'center'}}>
+                         see pricing{" "}
+                       </button>
+
        </div>
-
-<footer class="text-center text-lg-start pt-1  text-muted" style={{backgroundColor:'#0F123D'}}>
+    </div>
+</div>
+  )
+}
+const Footer=()=>{
+  return(
+    <footer className="text-center text-lg-start pt-1  text-muted" style={{backgroundColor:'#0F123D'}}>
   
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+  <section className="">
+    <div className="container text-center text-md-start mt-5">
+      <div className="row mt-3">
+        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
+            <i className="fas fa-gem me-3"></i>Company name
           </h6>
           <p>
           Get actionable tips on how to increase sales and conversions with design!
           </p>
           <p>
-          <button type="button" class="btn btn-danger" style={{alignSelf:'center',height:'80%',width:"40%"}}>
+          <button type="button" className="btn btn-danger" style={{alignSelf:'center',height:'80%',width:"40%"}}>
                                    see pricing{" "}
                                  </button>
                                  </p>
         </div>
 
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
           Services
 
           </h6>
           <p>
-            <a href="#!" class="text-reset">Our Platform</a>
+            <a href="#!" className="text-reset">Our Platform</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Testimonials</a>
+            <a href="#!" className="text-reset">Testimonials</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">our work</a>
+            <a href="#!" className="text-reset">our work</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">pricing</a>
-            <a href="#!" class="text-reset">schedule a demo</a>
+            <a href="#!" className="text-reset">pricing</a>
+            <a href="#!" className="text-reset">schedule a demo</a>
             
           
           </p>
         </div>
 
 
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
           Company
           </h6>
           <p>
-            <a href="#!" class="text-reset">about us </a>
+            <a href="#!" className="text-reset">about us </a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Case Studies</a>
+            <a href="#!" className="text-reset">Case Studies</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">License</a>
+            <a href="#!" className="text-reset">License</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">FAQs</a>
-            <a href="#!" class="text-reset">Refund Policy</a>
+            <a href="#!" className="text-reset">FAQs</a>
+            <a href="#!" className="text-reset">Refund Policy</a>
 
           </p>
         </div>
 
 
 
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
           Resources
           </h6>
-          <p><i class="fas fa-home me-3"></i> 
+          <p><i className="fas fa-home me-3"></i> 
 support@pixeltrue.com
 </p>
           <p>
-            <i class="fas fa-envelope me-3"></i>
+            <i className="fas fa-envelope me-3"></i>
             160 Robinson Road, #14-04 Singapore Business Federation Centre
           </p>
         </div>
@@ -975,11 +935,118 @@ support@pixeltrue.com
     </div>
   </section>
 
-  <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
+  <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
     2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">All Rights Reserved PIXEL TRUE STUDIO PTE. LTD 2019-2021</a>
+    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">All Rights Reserved PIXEL TRUE STUDIO PTE. LTD 2019-2021</a>
   </div>
 </footer>
+  )
+}
+function App() {
+
+  const [texts,setTexts]=useState([])
+  const SectionFour=()=>{
+  
+    return(
+      <div
+      className="row pb-4"
+      style={{ backgroundColor: "#0F123D", color: "white", paddingTop: "5%" }}
+    >
+      <div className="col-md-3">
+        <ReactLogo />
+      </div>
+      <div
+        className="col-md-9"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignContent:'space-around',
+          flexDirection: "column",
+        }}
+      >
+        {
+          texts.map(text=>{
+            return(
+              <div className=" d-flex   justify-content-around">
+              <div  
+              style={{
+              
+                backgroundImage: `url("./rectangle.svg")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                flexDirection:'row',
+                display:'flex',
+                padding:'1%',
+                margin:"1%",
+                height:'158px',
+                width:'853px'
+  
+                }}>
+                  <img src="https://uploads-ssl.webflow.com/5dd3495558fd7f3d1fcb52bc/60520913668a04140cdbd2e7_5f8824c807ae067bd51de921_Wade%201%20(1).png" loading="lazy" alt="" class="image-144"/>
+               <div className='d-flex' style={{
+                 flexDirection:'column',
+                 justifyContent:'center'
+               }}>
+                <h3>Create design projects</h3>{" "}
+                <small>
+                  Submit as many job requests as you want. We'll then assign you
+                  your personal designers and project manager to work on these
+                  requests
+                </small>
+                </div>
+              </div>
+            </div>
+            )
+          })
+        }
+        
+      </div>
+      <div className="col-md-12 m-5">
+        <button
+          type="button"
+          className="btn btn-danger"
+          style={{ alignSelf: "center" }}
+        >
+          schedule Demo
+        </button>
+      </div>
+  
+      <div className="col-md-12">
+        <div style={{ color: "#87CEEB" }}>
+          <h2>Custom Designs</h2>
+        </div>
+  
+        <h5>
+          Crafted with skill and care to help our clients grow their business!
+        </h5>
+      </div>
+    </div>
+    )
+  }
+
+ 
+const fetchData=async ()=>{
+let text=await axios.get('https://protected-shore-14845.herokuapp.com/text')
+setTexts(text.data.data)}
+useEffect(()=>{
+  fetchData()
+  
+},[])
+
+  return (
+    <div
+      className="App container-fluid p-0 m-0"
+    >
+    <SectionOne/>
+    <SectionTwo/>
+    <SectionThree/>
+    <SectionFour/>
+    <SectionFive/>
+    <SectionSix/>
+    <SectionSeven/>
+    <SectionEight/>
+    <SectionNine/>
+    <Footer/>
 </div>
        
 
