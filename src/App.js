@@ -268,21 +268,58 @@ return(
 const SectionTwo=()=>{
   return(
     <>
-          <div className="row" style={{ backgroundColor: "#0F123D" , color:'grey' }}>
-        <div className="col-sm-2"><strong>educative</strong> </div>
-        <div className="col-sm-2"><strong>steam</strong></div>
-        <div className="col-sm-2"><strong>liggrsystems</strong></div>
-        <div className="col-sm-2"><strong>bridgeprofits</strong> </div>
-        <div className="col-sm-2"><strong>inquivix</strong></div>
+          <div className="row mx-auto  my-auto pt-5" style={{ backgroundColor: "#0F123D" , color:'grey',height:"100px" }}>
+      
+       
+          <div className="col-sm-3 offset-1/2 d-flex flex-column">
+        <div className=" " style={{height:'100px',
+       backgroundImage:'url("https://uploads-ssl.webflow.com/5dd3495558fd7f3d1fcb52bc/5f50d21aa1488360e926f525_Artboard.png")',
+       backgroundSize:'190px',backgroundRepeat:'no-repeat',backgroundPosition:'center',justifyContent:'end'}}>
+          
+   
+           </div>
+           <div style={{TopBottom:"10%"}}>
+          <strong>educative</strong>
+    </div>
+           </div>
+           <div className="col-sm-3 offset-1/2 d-flex flex-column">
+        <div className=" " style={{height:'100px',
+       backgroundImage:'url("https://uploads-ssl.webflow.com/5dd3495558fd7f3d1fcb52bc/5f50d21aa1488360e926f525_Artboard.png")',
+       backgroundSize:'190px',backgroundRepeat:'no-repeat',backgroundPosition:'center',justifyContent:'end'}}>
+          
+   
+           </div>
+           <div style={{TopBottom:"10%"}}>
+          <strong>educative</strong>
+    </div>
+           </div>
+           <div className="col-sm-3 offset-1/2 d-flex flex-column">
+        <div className=" " style={{height:'100px',
+       backgroundImage:'url("https://uploads-ssl.webflow.com/5dd3495558fd7f3d1fcb52bc/5f50d21aa1488360e926f525_Artboard.png")',
+       backgroundSize:'190px',backgroundRepeat:'no-repeat',backgroundPosition:'center',justifyContent:'end'}}>
+          
+   
+           </div>
+           <div style={{TopBottom:"10%"}}>
+          <strong>educative</strong>
+    </div>
+           </div>
+           <div className="col-sm-3 offset-1/2 d-flex flex-column">
+        <div className=" " style={{height:'100px',
+       backgroundImage:'url("https://uploads-ssl.webflow.com/5dd3495558fd7f3d1fcb52bc/5f50d21aa1488360e926f525_Artboard.png")',
+       backgroundSize:'190px',backgroundRepeat:'no-repeat',backgroundPosition:'center',justifyContent:'end'}}>
+          
+   
+           </div>
+           <div style={{TopBottom:"10%"}}>
+          <strong>educative</strong>
+    </div>
+           </div>
+       
      
       </div>
 
-      <div className="row" style={{ color: "grey", backgroundColor: "#0F123D" }}>
-        <div className="col-md-6 text-muted "><p><strong>many requests</strong></p></div>
-        <div className="col-md-6 text-muted" style={{color:"grey"}}><p><strong> many requests</strong></p></div>
-        
-     
-      </div>
+
       
       <div className="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
         <div 
