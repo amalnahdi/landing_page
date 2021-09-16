@@ -6,6 +6,7 @@ import { ReactComponent as Svg4 } from "./1.svg";
 import { ReactComponent as Svg5 } from "./2.svg";
 import { ReactComponent as Svg6 } from "./3.svg" ;
 
+import Slider from "react-slick";
 
 import "./App.css";
 import { useEffect, useState } from "react";
@@ -13,7 +14,8 @@ import { Player } from "video-react";
 import axios from 'axios'
 const CardDone=()=>{
   return(
-    <div className="d-flex flex-col col-md-3 test" 
+    <div className="d-flex flex-col col-md-3 test " 
+ 
     >
 
           <Svg4  style={{
@@ -47,6 +49,7 @@ const CardDone=()=>{
 const CardDtwo=()=>{
   return(
     <div className="d-flex flex-col col-md-3 test" 
+ 
     >
 
           <Svg5  style={{
@@ -80,6 +83,7 @@ const CardDtwo=()=>{
 const CardDth=()=>{
   return(
     <div className="d-flex flex-col col-md-3 test" 
+ 
     >
 
           <Svg6 style={{
@@ -298,13 +302,16 @@ const SectionTwo=()=>{
             <h2>are hard to find.</h2>
           </div>
         </div>
-<div className="d-flex justify-content-around pl-5">
+        <div className="row " style={{width:'100vw'}} >
+<div className="col-md-12 d-flex flex-column  flex-md-row justify-content-around  justify-content-center  my-auto ">
 <CardDone/>
 <CardDtwo/>
 <CardDth/>
        
       
       </div>
+      </div>
+
       </div>
     </>
   )
@@ -351,7 +358,8 @@ const SectionThree=()=>{
             </div>
 
 
-<div className='row d-flex'>
+<div className='row '>
+<div class= "d-flex justify-content-start">
             <div className=" col-md-6">
             <Svg3/>
            </div>     
@@ -382,6 +390,8 @@ const SectionThree=()=>{
             
             </div>
           </div>
+          </div>
+
         </div>
     </>
   )
@@ -517,9 +527,70 @@ const SectionSix=()=>{
     </>
   )
 }
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <button
+    onClick={() => {
+      // NextSlide();
+      // setAniamte("slide1")
+    }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      style={{ height: "120", color: "#87CEEB",zIndex:"1" }}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+      />
+    </svg>
+  </button>
+  );
+}
+function SampleNExtArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <button
+
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      style={{
+        height: "120",
+        color: "#87CEEB",
+      }}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  </button>
+  );
+}
 const SectionSeven=()=>{
   const [count, SetCounter] = useState(0);
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNExtArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
+  const [animate, setAniamte] = useState("slide0");
   const slider = [
     {
       image: "p1.png",
@@ -538,14 +609,7 @@ const SectionSeven=()=>{
       The most important part of this plan is the amazing level of skill and talent all of the designers have. I honestly think the pricing is too low for the quality of work that is provided`,
     },
   ];
-  const [animate, setAniamte] = useState("slide0");
-  const NextSlide = () => {
-    if (count + 1 > slider.length - 1) {
-      SetCounter(0);
-    } else {
-      SetCounter(count + 1);
-    }
-  };
+
   return(
     <>
       <div style={{ paddingTop: "1%",
@@ -554,9 +618,14 @@ const SectionSeven=()=>{
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "#0F123D",}}>
-            <h3 style={{color:'blue'}}> wall of love </h3>
+            <h3 style={{color:'white'}}> wall of love </h3>
           </div>
-      <div
+     
+ 
+ <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div
         className="col-md-12"
         style={{
           paddingTop: "1%",
@@ -567,28 +636,7 @@ const SectionSeven=()=>{
           backgroundColor: "#0F123D",
         }}
       >
-        <button
-          onClick={() => {
-            // NextSlide();
-            setAniamte("slide1")
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            style={{ height: "120", color: "#87CEEB",zIndex:"1" }}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
-            />
-          </svg>
-        </button>
+       
         <div
           className={`card margin gif ${"slide0"==animate?"":"move-right"}`}
           style={{
@@ -696,30 +744,264 @@ const SectionSeven=()=>{
           </div>
         </div>
       
-        <button
-          onClick={() => {
-            NextSlide();
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+    <div
+        className="col-md-12"
+        style={{
+          paddingTop: "1%",
+          paddingBottom: "1%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#0F123D",
+        }}
+      >
+       
+        <div
+          className={`card margin gif ${"slide0"==animate?"":"move-right"}`}
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundSize: "cover",
+            backgroundColor: "inherit",
+            display: "flex",
+            width: "600px",
+            height: "400px",
+            justifyContent: "center",
+            paddingBottom: "9%",
+            paddingTop: "9%",
+            position: "relative",
+            alignSelf: "center",
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            style={{
-              height: "120",
-              color: "#87CEEB",
-            }}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </button>
+          <div className="row">
+            <div
+              className="col-md-2 image"
+              style={{ justifyContent: "flex-start", alignItems: "center" }}
+            >
+              <div
+                style={{
+                  height: "100px",
+                  width: "100px",
+                  borderRadius: "50%",
+                  backgroundImage: `url("./p1.png")`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  alignSelf: "center",
+                  marginLeft: "30%",
+                }}
+              ></div>
+            </div>
+            <div className="col-md-10">
+              <h5 style={{ color: "white" }}>{slider[count].username} </h5>
+
+              <h5 style={{ color: "#87CEEB" }}>founder </h5>
+              <h6
+                style={{
+                  color: "white",
+                  justifyContent: "center",
+                  marginTop: "20%",
+                }}
+              >
+                Pixel True have been fantastic. I get complimented all the time
+                on our illustrations, and I don't think my brand would be half
+                as recognisable without them.
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`card margin gif ${"slide1"==animate?"move-back":"d-none"}`}
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundSize: "cover",
+            backgroundColor: "inherit",
+            display: "flex",
+            width: "600px",
+            height: "400px",
+            justifyContent: "center",
+            paddingBottom: "9%",
+            paddingTop: "9%",
+            position: "relative",
+            alignSelf: "center",
+          }}
+        >
+          <div className="row">
+            <div
+              className="col-md-2 image"
+              style={{ justifyContent: "flex-start", alignItems: "center" }}
+            >
+              <div
+                style={{
+                  height: "100px",
+                  width: "100px",
+                  borderRadius: "50%",
+                  backgroundImage: `url("./p1.png")`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  alignSelf: "center",
+                  marginLeft: "30%",
+                }}
+              ></div>
+            </div>
+            <div className="col-md-10">
+              <h5 style={{ color: "white" }}>{slider[count].username} </h5>
+
+              <h5 style={{ color: "#87CEEB" }}>founder </h5>
+              <h6
+                style={{
+                  color: "white",
+                  justifyContent: "center",
+                  marginTop: "20%",
+                }}
+              >
+                Pixel True have been fantastic. I get complimented all the time
+                on our illustrations, and I don't think my brand would be half
+                as recognisable without them.
+              </h6>
+            </div>
+          </div>
+        </div>
+      
+        
       </div>
+    </div>
+    <div class="carousel-item">
+    <div
+        className="col-md-12"
+        style={{
+          paddingTop: "1%",
+          paddingBottom: "1%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#0F123D",
+        }}
+      >
+       
+        <div
+          className={`card margin gif ${"slide0"==animate?"":"move-right"}`}
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundSize: "cover",
+            backgroundColor: "inherit",
+            display: "flex",
+            width: "600px",
+            height: "400px",
+            justifyContent: "center",
+            paddingBottom: "9%",
+            paddingTop: "9%",
+            position: "relative",
+            alignSelf: "center",
+          }}
+        >
+          <div className="row">
+            <div
+              className="col-md-2 image"
+              style={{ justifyContent: "flex-start", alignItems: "center" }}
+            >
+              <div
+                style={{
+                  height: "100px",
+                  width: "100px",
+                  borderRadius: "50%",
+                  backgroundImage: `url("./p1.png")`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  alignSelf: "center",
+                  marginLeft: "30%",
+                }}
+              ></div>
+            </div>
+            <div className="col-md-10">
+              <h5 style={{ color: "white" }}>{slider[count].username} </h5>
+
+              <h5 style={{ color: "#87CEEB" }}>founder </h5>
+              <h6
+                style={{
+                  color: "white",
+                  justifyContent: "center",
+                  marginTop: "20%",
+                }}
+              >
+                Pixel True have been fantastic. I get complimented all the time
+                on our illustrations, and I don't think my brand would be half
+                as recognisable without them.
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`card margin gif ${"slide1"==animate?"move-back":"d-none"}`}
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundSize: "cover",
+            backgroundColor: "inherit",
+            display: "flex",
+            width: "600px",
+            height: "400px",
+            justifyContent: "center",
+            paddingBottom: "9%",
+            paddingTop: "9%",
+            position: "relative",
+            alignSelf: "center",
+          }}
+        >
+          <div className="row">
+            <div
+              className="col-md-2 image"
+              style={{ justifyContent: "flex-start", alignItems: "center" }}
+            >
+              <div
+                style={{
+                  height: "100px",
+                  width: "100px",
+                  borderRadius: "50%",
+                  backgroundImage: `url("./p1.png")`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  alignSelf: "center",
+                  marginLeft: "30%",
+                }}
+              ></div>
+            </div>
+            <div className="col-md-10">
+              <h5 style={{ color: "white" }}>{slider[count].username} </h5>
+
+              <h5 style={{ color: "#87CEEB" }}>founder </h5>
+              <h6
+                style={{
+                  color: "white",
+                  justifyContent: "center",
+                  marginTop: "20%",
+                }}
+              >
+                Pixel True have been fantastic. I get complimented all the time
+                on our illustrations, and I don't think my brand would be half
+                as recognisable without them.
+              </h6>
+            </div>
+          </div>
+        </div>
+      
+        
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+   <SamplePrevArrow/>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <SampleNExtArrow/>
+
+  </a>
+</div>
   </>
   )
 }
@@ -728,7 +1010,7 @@ const SectionEight=()=>{
     <div style={{ backgroundColor: "#0F123D" }}>
     <h2 style={{ color: "white " }}> Membership benefits</h2>
 
-    <div className="row d-flex">
+    <div className="row d-flex mt-5">
       <div className="col-md-6  flex-col  " style={{ float: "right" }}>
         <div
           className="ml-auto"
@@ -750,7 +1032,33 @@ const SectionEight=()=>{
           <h3 >Fast turnaround</h3>
           <h6 >Get your designs back on average in 2-3 days.</h6>
         </div>
+          </div>
+          <div className="col-md-6  flex-col  " style={{ float: "right" }}>
+        <div
+          
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
 
+            width: "auto",
+            height: "200px",
+            maxheight: "200px",
+            maxWidth: "70%",
+
+            padding: "9%",
+          }}
+        >
+          <h3 >Fast turnaround</h3>
+          <h6 >Get your designs back on average in 2-3 days.</h6>
+        </div>
+          </div>
+         
+      
+    </div>
+    <div className="row d-flex mt-5 pb-5">
+      <div className="col-md-6  flex-col  " style={{ float: "right" }}>
         <div
           className="ml-auto"
           style={{
@@ -768,18 +1076,13 @@ const SectionEight=()=>{
             padding: "9%",
           }}
         >
-          <h3>Human support</h3>
-          <h6>Dedicated Project Manager to ensure smooth delivery of design projects.</h6>
-        </div> 
-
-
-        
-
-
-      </div>
-      <div className="col-md-6 flex-col ">
+          <h3 >Fast turnaround</h3>
+          <h6 >Get your designs back on average in 2-3 days.</h6>
+        </div>
+          </div>
+          <div className="col-md-6  flex-col  " style={{ float: "right" }}>
         <div
-          className="mr-auto"
+          
           style={{
             borderWidth: "0",
             backgroundImage: `url("./box.svg")`,
@@ -791,36 +1094,15 @@ const SectionEight=()=>{
             maxheight: "200px",
             maxWidth: "70%",
 
-            justifyContent: "center",
-            alignItems: "center",
             padding: "9%",
           }}
         >
-          <h3>Team collaboration</h3>
-          <h4> Work directly with your new design team and project manager.</h4>
+          <h3 >Fast turnaround</h3>
+          <h6 >Get your designs back on average in 2-3 days.</h6>
         </div>
-        <div
-          className="mr-auto"
-          style={{
-            borderWidth: "0",
-            backgroundImage: `url("./box.svg")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-
-            width: "auto",
-            height: "200px",
-            maxheight: "200px",
-            maxWidth: "70%",
-
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "9%",
-          }}
-        >
-          <h4>Ownership of files</h4>
-          <h4>Have 100% ownership of all original source files created for your project.</h4>
-        </div>
-      </div>
+          </div>
+         
+      
     </div>
   </div>
 
@@ -942,6 +1224,7 @@ support@pixeltrue.com
 </footer>
   )
 }
+
 function App() {
 
   const [texts,setTexts]=useState([])

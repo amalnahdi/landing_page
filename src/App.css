@@ -21,8 +21,13 @@ html, body {
 
   height: 400px;
   width: 400px;
+  
 }
-
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .test{
+  margin-bottom:40%
+}
+ }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
