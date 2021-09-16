@@ -108,11 +108,23 @@ button {
   cursor: pointer;
 }
 footer{
-  background-color: indigo !important;
+  background-color: #0F123D !important;
   color: white !important;
 
 }
 .indigo{
   background-color: indigo !important;
 
+}
+
+.move-right {
+  transform: translateX(200%);
+  -webkit-transform:translateX(-200%);
+  transition-duration: 3000ms;
+
+}
+.move-back{
+  transform: translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  transition-duration: 3000ms;
 }

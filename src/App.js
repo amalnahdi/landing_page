@@ -109,19 +109,14 @@ const CardDth=()=>{
 </div>
   )
 }
-
-
-
-
-
 const Nav = () => {
   return (
     <nav
       class="navbar navbar-expand-lg navbar-light "
       style={{ backgroundColor: "#663B74 !important" }}
     >
-      <a class="navbar-brand" href="#" style={{color:'white'}}>
-        Pixeltrue
+      <a class="navbar-brand " href="#" style={{color:'white'}}>
+        <strong>Pixeltrue</strong> 
       </a>
 
       <button
@@ -135,27 +130,27 @@ const Nav = () => {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse d-flex justify-content-end " id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#" style={{color:'white'}}>
-              Home <span class="sr-only">(current)</span>
+              Case studying <span class="sr-only">(current)</span>
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="#" style={{color:'white'}}>
-              Features
+              pricing
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="#" style={{color:'white'}}>
-              Features
+              Our Work
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="#" style={{color:'white'}}>
-              Pricing
+              Our Platform
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -223,6 +218,7 @@ const Nav = () => {
 function App() {
   const [count, SetCounter] = useState(0);
   const [texts, setTexts] = useState([]);
+  const [animate, setAniamte] = useState("slide0");
 
   const NextSlide = () => {
     if (count + 1 > slider.length - 1) {
@@ -267,11 +263,14 @@ const fetchData=async ()=>{
 let text=await axios.get('https://protected-shore-14845.herokuapp.com/text')
 setTexts(text.data.data)}
 useEffect(()=>{
-  setTimeout(()=>{
-    fetchData()
+  // setTimeout(()=>{
+  //   fetchData()
 
-  },3000)
-},[])
+  // },3000)
+  setInterval(() => {
+    // NextSlide()
+  }, 2000);
+})
 
   const slider = [
     {
@@ -622,7 +621,8 @@ useEffect(()=>{
       >
         <button
           onClick={() => {
-            NextSlide();
+            // NextSlide();
+            setAniamte("slide1")
           }}
         >
           <svg
@@ -631,7 +631,7 @@ useEffect(()=>{
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            style={{ height: "120", color: "#87CEEB" }}
+            style={{ height: "120", color: "#87CEEB",zIndex:"1" }}
           >
             <path
               strokeLinecap="round"
@@ -642,7 +642,7 @@ useEffect(()=>{
           </svg>
         </button>
         <div
-          class=" card margin gif"
+          className={`card margin gif ${"slide0"==animate?"":"move-right"}`}
           style={{
             borderWidth: "0",
             backgroundImage: `url("./box.svg")`,
@@ -694,6 +694,60 @@ useEffect(()=>{
             </div>
           </div>
         </div>
+        <div
+          className={`card margin gif ${"slide1"==animate?"move-back":"d-none"}`}
+          style={{
+            borderWidth: "0",
+            backgroundImage: `url("./box.svg")`,
+            backgroundSize: "cover",
+            backgroundColor: "inherit",
+            display: "flex",
+            width: "600px",
+            height: "400px",
+            justifyContent: "center",
+            paddingBottom: "9%",
+            paddingTop: "9%",
+            position: "relative",
+            alignSelf: "center",
+          }}
+        >
+          <div className="row">
+            <div
+              className="col-md-2 image"
+              style={{ justifyContent: "flex-start", alignItems: "center" }}
+            >
+              <div
+                style={{
+                  height: "100px",
+                  width: "100px",
+                  borderRadius: "50%",
+                  backgroundImage: `url("./p1.png")`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  alignSelf: "center",
+                  marginLeft: "30%",
+                }}
+              ></div>
+            </div>
+            <div className="col-md-10">
+              <h5 style={{ color: "white" }}>{slider[count].username} </h5>
+
+              <h5 style={{ color: "#87CEEB" }}>founder </h5>
+              <h6
+                style={{
+                  color: "white",
+                  justifyContent: "center",
+                  marginTop: "20%",
+                }}
+              >
+                Pixel True have been fantastic. I get complimented all the time
+                on our illustrations, and I don't think my brand would be half
+                as recognisable without them.
+              </h6>
+            </div>
+          </div>
+        </div>
+      
         <button
           onClick={() => {
             NextSlide();
@@ -817,7 +871,7 @@ useEffect(()=>{
           </div>
         </div>
       </div>
-      <div className='row p-1 mx-auto d-flex indigo' style={{backgroundcolor:'indigo'}} >
+      <div className='row p-1 mx-auto d-flex ' style={{backgroundColor:'#0F123D'}} >
               <div className='col-md-10 offset-1' style={{
                 height:"400px",
                 backgroundImage:`url('./bg.png')`,
@@ -837,7 +891,7 @@ useEffect(()=>{
               </div>
        </div>
 
-<footer class="text-center text-lg-start pt-1  text-muted" style={{backgroundcolor:'blueviolet'}}>
+<footer class="text-center text-lg-start pt-1  text-muted" style={{backgroundColor:'#0F123D'}}>
   
   <section class="">
     <div class="container text-center text-md-start mt-5">
@@ -848,10 +902,12 @@ useEffect(()=>{
           </h6>
           <p>
           Get actionable tips on how to increase sales and conversions with design!
-          <button type="button" class="btn btn-danger" style={{alignSelf:'center'}}>
+          </p>
+          <p>
+          <button type="button" class="btn btn-danger" style={{alignSelf:'center',height:'80%',width:"40%"}}>
                                    see pricing{" "}
                                  </button>
-          </p>
+                                 </p>
         </div>
 
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
