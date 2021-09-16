@@ -1,7 +1,118 @@
 import { ReactComponent as ReactLogo } from "./abc.svg";
+import { ReactComponent as Svg1 } from "./imageR11.svg";
+import { ReactComponent as Svg2 } from "./imageR2.svg"; 
+import { ReactComponent as Svg3 } from "./imageL.svg" ; 
+import { ReactComponent as Svg4 } from "./1.svg";
+import { ReactComponent as Svg5 } from "./2.svg";
+import { ReactComponent as Svg6 } from "./3.svg" ;
+
+
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Player } from "video-react";
+import axios from 'axios'
+const CardDone=()=>{
+  return(
+    <div class="d-flex flex-col col-md-3 test" 
+    >
+
+          <Svg4  style={{
+    display:'flex',
+    flex:1,
+    position:'absolute',
+    bottom:'80%',
+    right:'15%',
+    height:'50%',
+
+  }}/> 
+  
+ 
+
+ <div className='d-flex  ' style={{
+   flexDirection:'column',
+   paddingTop:"53%",
+   flex:1
+ }}>
+ <h2 style={{paddingBottom:'5%'}}>bad communication</h2>
+  <p>You’re fed up with having to explain yourself multiple times.</p>
+ </div>
+     
+
+   
+
+</div>
+  )
+}
+
+const CardDtwo=()=>{
+  return(
+    <div class="d-flex flex-col col-md-3 test" 
+    >
+
+          <Svg5  style={{
+    display:'flex',
+    flex:1,
+    position:'absolute',
+    bottom:'80%',
+    right:'15%',
+    height:'50%',
+
+  }}/> 
+  
+ 
+
+ <div className='d-flex  ' style={{
+   flexDirection:'column',
+   paddingTop:"53%",
+   flex:1
+ }}>
+ <h2 style={{paddingBottom:'5%'}}> poor quality </h2>
+  <p>You’re tired of the guessing.game to find the right designer.</p>
+ </div>
+     
+
+   
+
+</div>
+  )
+}
+
+const CardDth=()=>{
+  return(
+    <div class="d-flex flex-col col-md-3 test" 
+    >
+
+          <Svg6 style={{
+    display:'flex',
+    flex:1,
+    position:'absolute',
+    bottom:'80%',
+    right:'15%',
+    height:'50%',
+
+  }}/> 
+  
+ 
+
+ <div className='d-flex  ' style={{
+   flexDirection:'column',
+   paddingTop:"53%",
+   flex:1
+ }}>
+ <h2 style={{paddingBottom:'5%'}}>Missed deadlines </h2>
+  <p>You lose hope as deadlines are missed over and over again.</p>
+ </div>
+     
+
+   
+
+</div>
+  )
+}
+
+
+
+
 
 const Nav = () => {
   return (
@@ -9,8 +120,8 @@ const Nav = () => {
       class="navbar navbar-expand-lg navbar-light "
       style={{ backgroundColor: "#663B74 !important" }}
     >
-      <a class="navbar-brand" href="#">
-        Navbar
+      <a class="navbar-brand" href="#" style={{color:'white'}}>
+        Pixeltrue
       </a>
 
       <button
@@ -27,23 +138,23 @@ const Nav = () => {
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" style={{color:'white'}}>
               Home <span class="sr-only">(current)</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" style={{color:'white'}}>
               Features
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" style={{color:'white'}}>
               Features
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" style={{color:'white'}}>
               Pricing
             </a>
           </li>
@@ -56,22 +167,23 @@ const Nav = () => {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
+              style={{color:'white'}}
             >
               More
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="#" style={{color:'white'}}>
                 Action
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="#" style={{color:'white'}}>
                 Another action
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="#" style={{color:'white'}}>
                 Something else here
               </a>
             </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown"style={{color:'white'}}>
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -80,17 +192,18 @@ const Nav = () => {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
+              style={{color:'white'}}
             >
               Login
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="#" style={{color:'white'}}>
                 Action
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="#" style={{color:'white'}}>
                 Another action
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="#" style={{color:'white'}}>
                 Something else here
               </a>
             </div>
@@ -109,6 +222,8 @@ const Nav = () => {
 };
 function App() {
   const [count, SetCounter] = useState(0);
+  const [texts, setTexts] = useState([]);
+
   const NextSlide = () => {
     if (count + 1 > slider.length - 1) {
       SetCounter(0);
@@ -148,24 +263,16 @@ function App() {
       },
     ],
   ];
+const fetchData=async ()=>{
+let text=await axios.get('https://protected-shore-14845.herokuapp.com/text')
+setTexts(text.data.data)}
+useEffect(()=>{
+  setTimeout(()=>{
+    fetchData()
 
-  const texts = [
-    {
-      title: "Create design projects",
-      content:
-        "Submit as many job requests as you want. We'll then assign you your personal designers and project manager to work on these requests",
-    },
-    {
-      title: "Drafts & revisions",
-      content:
-        "You’ll receive your design within a few business days. Submit as many revisions as you want until the design is perfect! ",
-    },
-    {
-      title: "Complete & download",
-      content:
-        "Submit as many job requests as you want. We'll then assign you your personal designers and project manager to work on these requests",
-    },
-  ];
+  },3000)
+},[])
+
   const slider = [
     {
       image: "p1.png",
@@ -228,26 +335,31 @@ function App() {
           </div>
         </div>
       </div>
-      <div class="row" style={{ backgroundColor: "#0F123D" }}>
-        <div class="col-sm-1">educative </div>
-        <div class="col-sm-1">steam</div>
-        <div class="col-sm-1">liggrsystems</div>
-        <div class="col-sm-1">bridgeprofits </div>
-        <div class="col-sm-1">inquivix</div>
+
+      <div class="row" style={{ backgroundColor: "#0F123D" , color:'grey' }}>
+        <div class="col-sm-2"><strong>educative</strong> </div>
+        <div class="col-sm-2"><strong>steam</strong></div>
+        <div class="col-sm-2"><strong>liggrsystems</strong></div>
+        <div class="col-sm-2"><strong>bridgeprofits</strong> </div>
+        <div class="col-sm-2"><strong>inquivix</strong></div>
+     
+      </div>
+      <div class="row" style={{ color: "grey", backgroundColor: "#0F123D" }}>
+        <div class="col-md-6 text-muted "><p><strong>many requests</strong></p></div>
+        <div class="col-md-6 text-muted" style={{color:"grey"}}><p><strong> many requests</strong></p></div>
+        
+     
       </div>
       <div class="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
-        <div class="col-md-6">ggg</div>
-        <div class="col-md-6">hhhh</div>
-      </div>
-      <div class="row" style={{ color: "white", backgroundColor: "#0F123D" }}>
-        <div
+        <div 
+        class="align-self-end"
           style={{
             alignContent: "center",
             justifyContent: "center",
             marginTop: "9%",
             marginBottom: "9%",
             color: "white",
-            marginLeft: "25%",
+            marginLeft: "35%",
             marginRight: "25%",
           }}
         >
@@ -256,19 +368,13 @@ function App() {
             <h2>are hard to find.</h2>
           </div>
         </div>
-
-        <div class="col-sm-1 col-md-3">
-          <h2>poor quality</h2>
-          <h5>You’re tired of the guessing game to find the right designer.</h5>
-        </div>
-        <div class="col-md-3">
-          <h2>bad communication</h2>
-          <h5>You’re fed up with having to explain yourself multiple times.</h5>
-        </div>
-        <div class="col-md-3">
-          <h2>missed deadlines</h2>You lose hope as deadlines are missed over
-          and over again
-        </div>
+<div class="d-flex justify-content-around pl-5">
+<CardDone/>
+<CardDtwo/>
+<CardDth/>
+       
+      
+      </div>
       </div>
       <div
         class="row"
@@ -291,49 +397,57 @@ function App() {
       <div class="row" style={{ backgroundColor: "#0F123D" }}>
         <div class="col-md-12" style={{ color: "white" }}>
           <div className="row">
-            <div className="col-md-6">
+            <div class= "d-flex justify-content-start">
+            <div className="col-md-6 my-auto  justify-content-center">
               <h1>Breath-taking Designs</h1>
-              <p>
+              <p >With faded secondary text
                 All of our designers are carefully vetted and have years of
                 experience working in the design industry. You’ll get a
                 dedicated UI Designer, Graphic Designer, Illustrator and Project
                 Manager. With a full design team, getting breath-taking designs
                 couldn't be any easier!{" "}
-              </p>
+                </p>
+              </div>
+              <div className='col-md-6'>
+                <Svg1/>
+              </div>
             </div>
-            <div className="col-md-6">
-              <h1>Communication That Matters</h1>
+            </div>
+
+
+<div className='row d-flex'>
+            <div class=" col-md-6">
+            <Svg3/>
+           </div>     
+            <div className="col-md-6  my-auto d-flex justify-content-center " style={{justifyContent:'center',alignItems:'center',display:"center",flexDirection:'column'}}> 
+             <h1>Communication That Matters</h1> 
+      
+             <p>
+                With a dedicated Project Manager who cares about your success
+                and direct live-chat access to your experienced designers,
+                communication issues will be no more!{" "}
+                </p>
+            </div>
+            
+            </div>
+            <div className='row d-flex ' style={{flexDirection:'row-reverse'}}>
+            <div class=" col-md-6">
+            <Svg2/>
+           </div>     
+            <div className="col-md-6  my-auto d-flex justify-content-center " style={{justifyContent:'center',alignItems:'center',display:"center",flexDirection:'column'}}> 
+             <h1>Communication That Matters</h1> 
+      
               <p>
                 With a dedicated Project Manager who cares about your success
                 and direct live-chat access to your experienced designers,
                 communication issues will be no more!{" "}
               </p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-12" style={{ color: "white" }}>
-          <div className="row">
-            <div className="col-md-6">
-              <h1>No More Missed Deadlines</h1>
-              <p>
-                Need that design done on a specific date? You can trust us to
-                deliver it on time. Once we commit to a date, we'll get it done.
-                Job requests will on average be delivered in a few business
-                days. Simpler tasks such as graphic designs and revisions will
-                be delivered within 24 hours.{" "}
-              </p>
-            </div>
-            <div className="col-md-6">
-              <h1>Communication That Matters</h1>
-              <p>
-                With a dedicated Project Manager who cares about your success
-                and direct live-chat access to your experienced designers,
-                communication issues will be no more{" "}
-              </p>
+            
             </div>
           </div>
         </div>
-      </div>
+        
       <div
         className="row"
         style={{ backgroundColor: "#0F123D", color: "white", paddingTop: "5%" }}
@@ -347,37 +461,39 @@ function App() {
             display: "flex",
             justifyContent: "space-around",
             flexDirection: "column",
+            paddingBottom:"9%"
           }}
         >
-          <div class="div-block-305">
-            <div class="col-md-8">
-              <h3>Create design projects</h3>{" "}
-              <p>
-                Submit as many job requests as you want. We'll then assign you
-                your personal designers and project manager to work on these
-                requests
-              </p>
-            </div>
-          </div>
-          <div class="div-block-305">
-            <div class="col-md-8">
-              <h3>Drafts revisions</h3>
-              <p>
-                You’ll receive your design within a few business days. Submit as
-                many revisions as you want until the design is perfect!
-              </p>
-            </div>
-          </div>
-          <div class="div-block-305">
-            <div class="col-md-8">
-              <h3>Complete download</h3>
-              <p>
-                Submit as many job requests as you want. We'll then assign you
-                your personal designers and project manager to work on these
-                requests
-              </p>
-            </div>
-          </div>
+          
+          {
+            texts.map(text=>{
+              return(
+                <div class=" d-flex justify-content-center">
+                <div class="col-md-8" 
+                style={{
+                  borderWidth: "0",
+                  backgroundImage: `url("./box.svg")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                   paddingBottom:"9%",
+                  width: "auto",
+                  height: "150px",
+                  maxheight: "50px",
+                  maxWidth: "70%", 
+                  paddingTop:"5%"
+                  }}>
+                  <h3>Create design projects</h3>{" "}
+                  <small>
+                    Submit as many job requests as you want. We'll then assign you
+                    your personal designers and project manager to work on these
+                    requests
+                  </small>
+                </div>
+              </div>
+              )
+            })
+          }
+          
         </div>
         <div className="col-md-12 mb-5">
           <button
@@ -432,7 +548,7 @@ function App() {
                     style={{
                       width: "auto",
                       height: "auto",
-                      position: "aboslute",
+                      position: "absolute",
                       top: "5%",
                       left: "6%",
                       backgroundColor: "white",
@@ -485,6 +601,14 @@ function App() {
           src="https://www.youtube.com/embed/A6WEAuSvcgY"
         />
       </div>
+      <div style={{ paddingTop: "1%",
+          paddingBottom: "1%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#0F123D",}}>
+            <h3 style={{color:'blue'}}> wall of love </h3>
+          </div>
       <div
         className="col-md-12"
         style={{
@@ -693,7 +817,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='row p-1 mx-auto d-flex' style={{backgroundcolor:'navy'}} >
+      <div className='row p-1 mx-auto d-flex indigo' style={{backgroundcolor:'indigo'}} >
               <div className='col-md-10 offset-1' style={{
                 height:"400px",
                 backgroundImage:`url('./bg.png')`,
@@ -713,34 +837,8 @@ function App() {
               </div>
        </div>
 
-<footer class="text-center text-lg-start bg-light text-muted">
-  <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
-    
-
-    <div style={{backgroundcolor:'navy'}}>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </section>
-
+<footer class="text-center text-lg-start pt-1  text-muted" style={{backgroundcolor:'blueviolet'}}>
+  
   <section class="">
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
